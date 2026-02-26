@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deeksha Dental Care | Dentist in Bikaner</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Dentist",
+ "name": "Deeksha Dental Care",
+ "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "Near Eid Gah Bari",
+   "addressLocality": "Bikaner",
+   "addressRegion": "Rajasthan",
+   "addressCountry": "IN"
+ },
+ "telephone": "+919376585486",
+ "email": "ddccare2000@gmail.com"
+}
+</script>
+
+</head>
+<body>
+
+<a href="https://wa.me/919376585486" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<header>
+<h1>Deeksha Dental Care</h1>
+<p>Near Eid Gah Bari, Bikaner</p>
+<p>📞 9376585486 | ✉ ddccare2000@gmail.com</p>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="rct.html">RCT</a>
+<a href="implant.html">Implants</a>
+<a href="braces.html">Braces</a>
+<a href="denture.html">Denture</a>
+<a href="postcore.html">Post & Core</a>
+<a href="extraction.html">Extraction</a>
+<a href="scaling.html">Scaling</a>
+<a href="composite.html">Composite</a>
+<a href="blog.html" style="color:#00d4ff;">📝 Blog</a>
+</nav>
+
+<!-- Multi Language -->
+<div style="text-align:right; padding:10px 20px;">
+<div id="google_translate_element"></div>
+</div>
+
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+pageLanguage: 'en',
+includedLanguages: 'en,hi,bn,ta,te,ur,gu,pa'
+}, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<div class="container">
+
+<div class="card">
+<h2>Welcome</h2>
+<p>Expert Root Canal, Implants and Braces treatment with modern technology and patient comfort focus.</p>
+</div>
+
+<div class="card">
+<h2>Clinic Location</h2>
+<iframe 
+src="https://www.google.com/maps?q=Deeksha+Dental+Care+Bikaner&output=embed"
+width="100%" height="300" style="border:0;" allowfullscreen="">
+</iframe>
+</div>
+
+<div class="card">
+<h2>Book Appointment</h2>
+<form action="mailto:ddccare2000@gmail.com" method="POST" enctype="text/plain" class="appointment-form">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+<input type="date" name="Date">
+<textarea name="Message" rows="4" placeholder="Your Problem"></textarea>
+<button type="submit">Book Now</button>
+</form>
+</div>
+
+</div>
+
+<footer>
+© 2026 Deeksha Dental Care
+</footer>
+<!-- Chatbot HTML -->
+<div class="chatbot-button" onclick="toggleChatbot()">
+    <i class="fas fa-comment-dots"></i>
+</div>
+
+<div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+        <span><i class="fas fa-tooth"></i> Dental Assistant</span>
+        <i class="fas fa-times" onclick="closeChatbot()"></i>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+        <div class="chat-message bot-message">
+            <i class="fas fa-tooth" style="margin-right: 8px; color: #0a7ea4;"></i>
+            👋 Welcome to Deeksha Dental Care! How can I help you today?
+        </div>
+    </div>
+    <div class="chatbot-input-area">
+        <input type="text" id="chatbotInput" placeholder="Type your question..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<!-- Link chatbot JavaScript -->
+<script src="chatbot.js"></script>
+</body>
+</html>

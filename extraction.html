@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooth Extraction | Deeksha Dental Care</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .price-tag {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0a7ea4;
+      margin: 15px 0 5px;
+    }
+    .extraction-icon {
+      font-size: 3rem;
+      color: #0a7ea4;
+      margin-bottom: 10px;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0;
+    }
+    .feature-list li {
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .feature-list i {
+      color: #25D366;
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #0a7ea4;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: #065a75;
+    }
+    .flex-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .extraction-card {
+      flex: 1 1 280px;
+      transition: transform 0.2s;
+    }
+    .extraction-card:hover {
+      transform: translateY(-8px);
+    }
+    .care-box {
+      background: #eef8fc;
+      padding: 20px;
+      border-radius: 16px;
+      margin: 20px 0;
+      border-left: 5px solid #0a7ea4;
+    }
+    .care-box h4 {
+      margin-top: 0;
+      color: #0a7ea4;
+    }
+    .warning-box {
+      background: #fff3e0;
+      padding: 20px;
+      border-radius: 16px;
+      margin: 20px 0;
+      border-left: 5px solid #ff9800;
+    }
+    .badge {
+      background: #0a7ea4;
+      color: white;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-left: 10px;
+    }
+
+    /* ===== INJECTION ANIMATION STYLES ===== */
+    .injection-section {
+      background: linear-gradient(145deg, #f8fcff, #ffffff);
+      border-radius: 24px;
+      padding: 30px;
+      margin: 40px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .injection-title {
+      text-align: center;
+      color: #0a7ea4;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .injection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin: 30px 0;
+    }
+
+    .injection-card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(10,126,164,0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #e0f0f8;
+    }
+
+    .injection-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(10,126,164,0.15);
+      border-color: #0a7ea4;
+    }
+
+    .injection-card.active {
+      border: 2px solid #0a7ea4;
+      background: #f0faff;
+    }
+
+    .injection-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #e6f4fa, #cbe7f2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 2.5rem;
+      color: #0a7ea4;
+      transition: transform 0.4s ease;
+    }
+
+    .injection-card:hover .injection-icon {
+      transform: rotate(15deg) scale(1.1);
+    }
+
+    .injection-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #083e52;
+      margin-bottom: 10px;
+    }
+
+    .injection-desc {
+      color: #4a5568;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .injection-area {
+      background: #e6f4fa;
+      padding: 5px 12px;
+      border-radius: 30px;
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #0a7ea4;
+    }
+
+    /* Animation Container */
+    .animation-container {
+      background: #f0faff;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 30px 0;
+      position: relative;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed #b8dff0;
+    }
+
+    .tooth-diagram {
+      position: relative;
+      width: 200px;
+      height: 250px;
+    }
+
+    .tooth-outline {
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 60px 60px 30px 30px;
+      border: 4px solid #0a7ea4;
+      position: relative;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .root {
+      position: absolute;
+      width: 40px;
+      height: 80px;
+      background: white;
+      border: 4px solid #0a7ea4;
+      border-top: none;
+      bottom: -40px;
+    }
+
+    .root.left {
+      left: 20px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .root.right {
+      right: 20px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .injection-needle {
+      position: absolute;
+      width: 4px;
+      height: 60px;
+      background: #ff4444;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: inject 2s infinite;
+      transform-origin: top;
+    }
+
+    @keyframes inject {
+      0%, 100% { height: 60px; top: -30px; opacity: 0.8; }
+      50% { height: 100px; top: -50px; opacity: 1; }
+    }
+
+    .nerve {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: #ff6b6b;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+      50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+    }
+
+    .infiltration-dots {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      animation: spread 2s infinite;
+    }
+
+    .dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #0a7ea4;
+      border-radius: 50%;
+      opacity: 0.6;
+    }
+
+    .dot:nth-child(1) { top: 20%; left: 30%; animation: float 2s infinite; }
+    .dot:nth-child(2) { top: 40%; left: 60%; animation: float 2.3s infinite; }
+    .dot:nth-child(3) { top: 60%; left: 40%; animation: float 1.8s infinite; }
+    .dot:nth-child(4) { top: 30%; left: 70%; animation: float 2.1s infinite; }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); opacity: 0.6; }
+      50% { transform: translate(10px, -10px); opacity: 1; }
+    }
+
+    @keyframes spread {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.5); opacity: 0.4; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+
+    .nerve-block-area {
+      position: absolute;
+      width: 60px;
+      height: 100px;
+      background: rgba(10,126,164,0.2);
+      border: 2px dashed #0a7ea4;
+      border-radius: 10px;
+      animation: glow 2s infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 5px #0a7ea4; }
+      50% { box-shadow: 0 0 20px #0a7ea4; }
+    }
+
+    /* Injection Info Panel */
+    .injection-info {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 5px solid #0a7ea4;
+      animation: slideIn 0.5s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .info-title {
+      color: #0a7ea4;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .info-detail {
+      display: flex;
+      gap: 15px;
+      margin: 10px 0;
+      padding: 10px;
+      background: #f8fcff;
+      border-radius: 10px;
+    }
+
+    .info-label {
+      font-weight: 600;
+      min-width: 100px;
+      color: #083e52;
+    }
+
+    .info-value {
+      color: #4a5568;
+    }
+
+    /* Floating Video (existing) */
+    .floating-video-container {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 280px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      z-index: 999;
+      overflow: hidden;
+      border: 2px solid #0a7ea4;
+      transition: all 0.3s ease;
+    }
+
+    .floating-video-container.minimized {
+      width: 180px;
+      opacity: 0.9;
+    }
+
+    .floating-video-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(10,126,164,0.3);
+    }
+
+    .floating-video-header {
+      background: #0a7ea4;
+      color: white;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: move;
+    }
+
+    .floating-video-header i {
+      cursor: pointer;
+      margin-left: 10px;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .floating-video-header i:hover {
+      opacity: 1;
+    }
+
+    .floating-video-content video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .video-controls {
+      display: flex;
+      padding: 5px;
+      background: #f0f0f0;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .video-controls button {
+      background: #0a7ea4;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .video-controls button:hover {
+      background: #065a75;
+    }
+
+    @media (max-width: 768px) {
+      .floating-video-container {
+        width: 200px;
+        bottom: 80px;
+        right: 10px;
+      }
+      
+      .floating-video-container.minimized {
+        width: 120px;
+      }
+      
+      .injection-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/919376585486" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Floating Video Player -->
+<div class="floating-video-container" id="floatingVideo">
+  <div class="floating-video-header" id="videoHeader">
+    <span><i class="fas fa-play-circle"></i> Extraction Procedure</span>
+    <span>
+      <i class="fas fa-minus" onclick="minimizeVideo()" title="Minimize"></i>
+      <i class="fas fa-times" onclick="closeVideo()" title="Close"></i>
+    </span>
+  </div>
+  <div class="floating-video-content" id="videoContent">
+    <video id="extractionVideo" controls preload="metadata">
+      <source src="extraction.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-controls">
+      <button onclick="document.getElementById('extractionVideo').play()"><i class="fas fa-play"></i> Play</button>
+      <button onclick="document.getElementById('extractionVideo').pause()"><i class="fas fa-pause"></i> Pause</button>
+    </div>
+  </div>
+</div>
+
+<header>
+  <h1>Deeksha Dental Care</h1>
+  <p>Near Eid Gah Bari, Bikaner</p>
+  <p>📞 9376585486 | ✉ ddccare2000@gmail.com</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="rct.html">RCT</a>
+  <a href="implant.html">Implants</a>
+  <a href="braces.html">Braces</a>
+  <a href="denture.html">Denture</a>
+  <a href="postcore.html">Post & Core</a>
+  <a href="extraction.html">Extraction</a>
+  <a href="scaling.html">Scaling</a>
+  <a href="composite.html">Composite</a>
+</nav>
+
+<!-- Google Translate -->
+<div style="text-align:right; padding:10px 20px;">
+  <div id="google_translate_element"></div>
+</div>
+
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,hi,bn,ta,te,ur,gu,pa'
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<div class="container">
+
+  <!-- Page Title -->
+  <div class="card" style="text-align: center;">
+    <i class="fas fa-tooth extraction-icon"></i>
+    <h2>Tooth Extraction Services</h2>
+    <p style="font-size: 1.2rem; color: #0a7ea4;">Safe, painless removal with expert care</p>
+  </div>
+
+  <!-- Extraction Cards -->
+  <div class="flex-row">
+    <div class="card extraction-card">
+      <i class="fas fa-tooth extraction-icon"></i>
+      <h3>🦷 Simple Extraction</h3>
+      <div class="price-tag">₹500</div>
+      <p style="margin:0;">(per tooth)</p>
+      <ul class="feature-list">
+        <li><i class="fas fa-check-circle"></i> For visible, loose teeth</li>
+        <li><i class="fas fa-check-circle"></i> Local anesthesia included</li>
+        <li><i class="fas fa-check-circle"></i> Quick procedure (15-20 mins)</li>
+        <li><i class="fas fa-check-circle"></i> Minimal discomfort</li>
+      </ul>
+      <p class="price-note">*For milk teeth & slightly mobile teeth</p>
+      <div style="text-align: center; margin-top: 15px;">
+        <a href="https://wa.me/919376585486?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Simple%20Extraction%20(₹500)" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;"> enquire on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="card extraction-card">
+      <i class="fas fa-teeth extraction-icon"></i>
+      <h3>🔧 Surgical Extraction</h3>
+      <div class="price-tag">₹1,500 - ₹3,000</div>
+      <p style="margin:0;">(per tooth)</p>
+      <ul class="feature-list">
+        <li><i class="fas fa-check-circle"></i> For impacted/broken teeth</li>
+        <li><i class="fas fa-check-circle"></i> Local anesthesia included</li>
+        <li><i class="fas fa-check-circle"></i> May require small incision</li>
+        <li><i class="fas fa-check-circle"></i> Stitches if needed</li>
+      </ul>
+      <p class="price-note">*Price depends on complexity</p>
+      <div style="text-align: center; margin-top: 15px;">
+        <a href="https://wa.me/919376585486?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Surgical%20Extraction" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;"> enquire on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="card extraction-card">
+      <i class="fas fa-brain extraction-icon"></i>
+      <h3>🦷 Wisdom Tooth Removal</h3>
+      <div class="price-tag">₹2,000 - ₹4,000</div>
+      <p style="margin:0;">(per tooth)</p>
+      <ul class="feature-list">
+        <li><i class="fas fa-check-circle"></i> Impacted wisdom teeth</li>
+        <li><i class="fas fa-check-circle"></i> Local anesthesia included</li>
+        <li><i class="fas fa-check-circle"></i> Advanced surgical care</li>
+        <li><i class="fas fa-check-circle"></i> Post-op instructions given</li>
+      </ul>
+      <p class="price-note">*X-ray may be required</p>
+      <div style="text-align: center; margin-top: 15px;">
+        <a href="https://wa.me/919376585486?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Wisdom%20Tooth%20Removal" class="cta-button" style="padding: 8px 20px; font-size: 0.9rem;"> enquire on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== INJECTION & INFILTRATION ANIMATION SECTION ===== -->
+  <div class="injection-section">
+    <h2 class="injection-title"><i class="fas fa-syringe"></i> Anesthesia & Infiltration Techniques</h2>
+    <p style="text-align: center; color: #4a5568; margin-bottom: 30px;">Click on any technique to see how it works</p>
+    
+    <div class="injection-grid">
+      <!-- Local Infiltration -->
+      <div class="injection-card" onclick="showInjectionInfo('infiltration')" id="card-infiltration">
+        <div class="injection-icon"><i class="fas fa-water"></i></div>
+        <div class="injection-name">Local Infiltration</div>
+        <div class="injection-desc">Anesthesia injected near tooth apex, numbs small area</div>
+        <span class="injection-area">Upper teeth</span>
+      </div>
+      
+      <!-- Nerve Block -->
+      <div class="injection-card" onclick="showInjectionInfo('nerveblock')" id="card-nerveblock">
+        <div class="injection-icon"><i class="fas fa-code-branch"></i></div>
+        <div class="injection-name">Nerve Block (IANB)</div>
+        <div class="injection-desc">Injected near main nerve, numbs half of jaw</div>
+        <span class="injection-area">Lower teeth</span>
+      </div>
+      
+      <!-- Intraligamentary -->
+      <div class="injection-card" onclick="showInjectionInfo('intraligamentary')" id="card-intraligamentary">
+        <div class="injection-icon"><i class="fas fa-grip-lines-vertical"></i></div>
+        <div class="injection-name">Intraligamentary</div>
+        <div class="injection-desc">Injected into periodontal ligament, for single tooth</div>
+        <span class="injection-area">Supplemental</span>
+      </div>
+      
+      <!-- Intraosseous -->
+      <div class="injection-card" onclick="showInjectionInfo('intraosseous')" id="card-intraosseous">
+        <div class="injection-icon"><i class="fas fa-bone"></i></div>
+        <div class="injection-name">Intraosseous</div>
+        <div class="injection-desc">Injected directly into bone, for "hot tooth" cases</div>
+        <span class="injection-area">Supplemental</span>
+      </div>
+    </div>
+    
+    <!-- Animation Container -->
+    <div class="animation-container" id="animationContainer">
+      <!-- Default: Local Infiltration Animation -->
+      <div id="infiltration-animation" style="display: block;">
+        <div style="position: relative; width: 300px; height: 250px;">
+          <div style="position: absolute; width: 100px; height: 150px; background: white; border: 4px solid #0a7ea4; border-radius: 40px 40px 20px 20px; left: 50%; transform: translateX(-50%);"></div>
+          <div class="infiltration-dots">
+            <div class="dot" style="top: 30%; left: 40%;"></div>
+            <div class="dot" style="top: 50%; left: 60%;"></div>
+            <div class="dot" style="top: 70%; left: 45%;"></div>
+            <div class="dot" style="top: 40%; left: 55%;"></div>
+          </div>
+          <div style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 4px; height: 60px; background: #ff4444; animation: inject 2s infinite;"></div>
+          <p style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); color: #0a7ea4; font-weight: 600;">Local Infiltration</p>
+        </div>
+      </div>
+      
+      <!-- Nerve Block Animation -->
+      <div id="nerveblock-animation" style="display: none;">
+        <div style="position: relative; width: 350px; height: 250px;">
+          <div style="position: absolute; width: 80px; height: 140px; background: white; border: 4px solid #0a7ea4; border-radius: 30px 30px 15px 15px; left: 30%;"></div>
+          <div style="position: absolute; width: 80px; height: 140px; background: white; border: 4px solid #0a7ea4; border-radius: 30px 30px 15px 15px; right: 30%;"></div>
+          <div class="nerve-block-area" style="left: 40%; top: 30%;"></div>
+          <div style="position: absolute; top: 20px; left: 45%; width: 4px; height: 80px; background: #ff4444; transform: rotate(-15deg); animation: inject 2s infinite;"></div>
+          <p style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); color: #0a7ea4; font-weight: 600;">Inferior Alveolar Nerve Block</p>
+        </div>
+      </div>
+      
+      <!-- Intraligamentary Animation -->
+      <div id="intraligamentary-animation" style="display: none;">
+        <div style="position: relative; width: 250px; height: 250px;">
+          <div style="position: absolute; width: 100px; height: 160px; background: white; border: 4px solid #0a7ea4; border-radius: 40px 40px 20px 20px; left: 50%; transform: translateX(-50%);"></div>
+          <div style="position: absolute; width: 10px; height: 160px; background: rgba(10,126,164,0.2); left: 50%; transform: translateX(-50%); border-left: 2px dashed #0a7ea4; border-right: 2px dashed #0a7ea4;"></div>
+          <div style="position: absolute; top: 30px; left: 40%; width: 4px; height: 40px; background: #ff4444; transform: rotate(10deg); animation: inject 1.5s infinite;"></div>
+          <p style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); color: #0a7ea4; font-weight: 600;">Intraligamentary Injection</p>
+        </div>
+      </div>
+      
+      <!-- Intraosseous Animation -->
+      <div id="intraosseous-animation" style="display: none;">
+        <div style="position: relative; width: 280px; height: 250px;">
+          <div style="position: absolute; width: 100px; height: 160px; background: white; border: 4px solid #0a7ea4; border-radius: 40px 40px 20px 20px; left: 30%;"></div>
+          <div style="position: absolute; width: 40px; height: 60px; background: #d9b38c; border-radius: 10px; left: 55%; top: 40%; border: 2px solid #8b5a2b;"></div>
+          <div style="position: absolute; top: 60px; left: 60%; width: 4px; height: 50px; background: #ff4444; animation: inject 2s infinite;"></div>
+          <div class="infiltration-dots" style="left: 55%; top: 40%; width: 40px; height: 60px;"></div>
+          <p style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); color: #0a7ea4; font-weight: 600;">Intraosseous Injection</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Information Panel -->
+    <div class="injection-info" id="injectionInfo">
+      <div class="info-title" id="infoTitle">Local Infiltration</div>
+      <div class="info-detail">
+        <span class="info-label">Technique:</span>
+        <span class="info-value" id="infoTechnique">Injection near tooth apex, solution spreads through bone</span>
+      </div>
+      <div class="info-detail">
+        <span class="info-label">Best for:</span>
+        <span class="info-value" id="infoBestFor">Upper teeth, anterior region, children</span>
+      </div>
+      <div class="info-detail">
+        <span class="info-label">Onset time:</span>
+        <span class="info-value" id="infoOnset">2-5 minutes</span>
+      </div>
+      <div class="info-detail">
+        <span class="info-label">Duration:</span>
+        <span class="info-value" id="infoDuration">30-60 minutes (with epinephrine)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Choose Us -->
+  <div class="card">
+    <h3>✨ Why Deeksha Dental Care for Extraction?</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
+      <div style="flex:1; min-width:200px;">
+        <i class="fas fa-user-md" style="color:#0a7ea4; font-size:1.5rem;"></i>
+        <h4>Experienced Team</h4>
+        <p>Skilled dentists for safe extractions.</p>
+      </div>
+      <div style="flex:1; min-width:200px;">
+        <i class="fas fa-syringe" style="color:#0a7ea4; font-size:1.5rem;"></i>
+        <h4>Pain Management</h4>
+        <p>Multiple anesthesia techniques for comfort.</p>
+      </div>
+      <div style="flex:1; min-width:200px;">
+        <i class="fas fa-clock" style="color:#0a7ea4; font-size:1.5rem;"></i>
+        <h4>Quick Procedure</h4>
+        <p>Most extractions done in single visit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- When is Extraction Needed? -->
+  <div class="card">
+    <h3>🦷 When is Tooth Extraction Needed?</h3>
+    <ul style="font-size: 1.1rem; line-height: 1.8;">
+      <li><i class="fas fa-times-circle" style="color:#dc3545;"></i> Severe tooth decay / damage</li>
+      <li><i class="fas fa-times-circle" style="color:#dc3545;"></i> Advanced gum disease</li>
+      <li><i class="fas fa-times-circle" style="color:#dc3545;"></i> Impacted wisdom teeth</li>
+      <li><i class="fas fa-times-circle" style="color:#dc3545;"></i> Overcrowded teeth (for braces)</li>
+      <li><i class="fas fa-times-circle" style="color:#dc3545;"></i> Fractured tooth beyond repair</li>
+    </ul>
+  </div>
+
+  <!-- Post-Extraction Care Instructions -->
+  <div class="care-box">
+    <h4><i class="fas fa-heartbeat"></i> After Extraction Care Instructions</h4>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+      <div style="flex:1; min-width:200px;">
+        <h5>✅ DO's:</h5>
+        <ul>
+          <li>Bite on gauze for 30-45 mins</li>
+          <li>Apply ice pack (first 24 hrs)</li>
+          <li>Take prescribed medicines</li>
+          <li>Eat soft foods for 2-3 days</li>
+          <li>Drink plenty of water</li>
+        </ul>
+      </div>
+      <div style="flex:1; min-width:200px;">
+        <h5>❌ DON'Ts:</h5>
+        <ul>
+          <li>Don't spit or rinse forcefully</li>
+          <li>Don't use straw (avoids dry socket)</li>
+          <li>Don't smoke or drink alcohol</li>
+          <li>Don't touch wound with tongue</li>
+          <li>Don't eat hard/crunchy foods</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Warning Signs -->
+  <div class="warning-box">
+    <h4><i class="fas fa-exclamation-triangle" style="color:#ff9800;"></i> When to Call Doctor Immediately:</h4>
+    <ul>
+      <li>Severe pain not controlled by medicine</li>
+      <li>Excessive bleeding after 24 hours</li>
+      <li>Fever or chills</li>
+      <li>Swelling that worsens after 2-3 days</li>
+      <li>Numbness that doesn't go away</li>
+    </ul>
+  </div>
+
+  <!-- Call to action -->
+  <div class="card" style="text-align: center;">
+    <h3>📅 Book Your Extraction Consultation</h3>
+    <p>Visit us near Eid Gah Bari, Bikaner or call / WhatsApp for appointment.</p>
+    <a href="https://wa.me/919376585486" class="cta-button" target="_blank">
+      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+    <a href="tel:+919376585486" class="cta-button" style="background: #083e52; margin-left: 10px;">
+      <i class="fas fa-phone-alt"></i> Call Now
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Deeksha Dental Care — Safe & gentle extractions
+</footer>
+
+<script>
+// ===== FLOATING VIDEO FUNCTIONS =====
+function minimizeVideo() {
+  const container = document.getElementById('floatingVideo');
+  const content = document.getElementById('videoContent');
+  
+  if (container.classList.contains('minimized')) {
+    container.classList.remove('minimized');
+    content.style.display = 'block';
+  } else {
+    container.classList.add('minimized');
+    content.style.display = 'none';
+  }
+}
+
+function closeVideo() {
+  const container = document.getElementById('floatingVideo');
+  container.style.display = 'none';
+}
+
+// Simple drag functionality
+let isDragging = false;
+let offsetX, offsetY;
+
+const header = document.getElementById('videoHeader');
+const container = document.getElementById('floatingVideo');
+
+if (header && container) {
+  header.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - container.offsetLeft;
+    offsetY = e.clientY - container.offsetTop;
+    container.style.cursor = 'grabbing';
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      container.style.left = (e.clientX - offsetX) + 'px';
+      container.style.top = (e.clientY - offsetY) + 'px';
+      container.style.right = 'auto';
+      container.style.bottom = 'auto';
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    container.style.cursor = 'default';
+  });
+}
+
+// ===== INJECTION ANIMATION FUNCTIONS =====
+function showInjectionInfo(type) {
+  // Hide all animations
+  document.getElementById('infiltration-animation').style.display = 'none';
+  document.getElementById('nerveblock-animation').style.display = 'none';
+  document.getElementById('intraligamentary-animation').style.display = 'none';
+  document.getElementById('intraosseous-animation').style.display = 'none';
+  
+  // Remove active class from all cards
+  document.getElementById('card-infiltration').classList.remove('active');
+  document.getElementById('card-nerveblock').classList.remove('active');
+  document.getElementById('card-intraligamentary').classList.remove('active');
+  document.getElementById('card-intraosseous').classList.remove('active');
+  
+  // Show selected animation and add active class
+  if (type === 'infiltration') {
+    document.getElementById('infiltration-animation').style.display = 'block';
+    document.getElementById('card-infiltration').classList.add('active');
+    
+    document.getElementById('infoTitle').textContent = 'Local Infiltration';
+    document.getElementById('infoTechnique').textContent = 'Injection near tooth apex, solution spreads through cancellous bone';
+    document.getElementById('infoBestFor').textContent = 'Upper teeth, anterior region, children, minor procedures';
+    document.getElementById('infoOnset').textContent = '2-5 minutes';
+    document.getElementById('infoDuration').textContent = '30-60 minutes (with epinephrine)';
+    
+  } else if (type === 'nerveblock') {
+    document.getElementById('nerveblock-animation').style.display = 'block';
+    document.getElementById('card-nerveblock').classList.add('active');
+    
+    document.getElementById('infoTitle').textContent = 'Inferior Alveolar Nerve Block (IANB)';
+    document.getElementById('infoTechnique').textContent = 'Injected near mandibular foramen, numbs entire nerve distribution';
+    document.getElementById('infoBestFor').textContent = 'Lower molars, premolars, multiple teeth, surgical extractions';
+    document.getElementById('infoOnset').textContent = '5-10 minutes';
+    document.getElementById('infoDuration').textContent = '60-120 minutes';
+    
+  } else if (type === 'intraligamentary') {
+    document.getElementById('intraligamentary-animation').style.display = 'block';
+    document.getElementById('card-intraligamentary').classList.add('active');
+    
+    document.getElementById('infoTitle').textContent = 'Intraligamentary Injection (PDL)';
+    document.getElementById('infoTechnique').textContent = 'Injected into periodontal ligament space under pressure';
+    document.getElementById('infoBestFor').textContent = 'Single tooth, supplemental anesthesia, "hot tooth" cases';
+    document.getElementById('infoOnset').textContent = '30-60 seconds (very fast)';
+    document.getElementById('infoDuration').textContent = '15-30 minutes';
+    
+  } else if (type === 'intraosseous') {
+    document.getElementById('intraosseous-animation').style.display = 'block';
+    document.getElementById('card-intraosseous').classList.add('active');
+    
+    document.getElementById('infoTitle').textContent = 'Intraosseous Injection';
+    document.getElementById('infoTechnique').textContent = 'Injected directly into cancellous bone between teeth';
+    document.getElementById('infoBestFor').textContent = 'Failed anesthesia, "hot tooth", supplemental technique';
+    document.getElementById('infoOnset').textContent = '1-2 minutes';
+    document.getElementById('infoDuration').textContent = '30-60 minutes';
+  }
+}
+
+// Ensure video stays on top
+window.addEventListener('scroll', () => {
+  const container = document.getElementById('floatingVideo');
+  if (container) container.style.zIndex = 999;
+});
+</script>
+
+</body>
+</html>
