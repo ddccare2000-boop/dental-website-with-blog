@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids Dental Guide | Bachon ke Dant | Deeksha Dental Care Bikaner</title>
+<meta name="description" content="Bachon ke doodh ke daant se pakke daant tak poori jaankari. Milk teeth, eruption chart, cavity prevention, braces timing — sab Hindi mein.">
+<meta name="keywords" content="bachon ke dant hindi, milk teeth hindi, baby teeth india, kids dental care hindi, doodh ke daant, permanent teeth age, children dentist bikaner">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #0a7ea4;
+  --primary-dark: #065a75;
+  --deep: #083e52;
+  --gold: #e6a817;
+  --cream: #f4f9fb;
+  --purple: #7c3aed;
+  --purple-light: #f5f3ff;
+  --pink: #db2777;
+  --pink-light: #fdf2f8;
+  --teal: #0d9488;
+  --teal-light: #f0fdfa;
+  --orange: #ea580c;
+  --orange-light: #fff7ed;
+  --green: #059669;
+  --green-light: #ecfdf5;
+  --red: #dc2626;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #d4eaf3;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 60%, #db2777 100%);
+  padding: 55px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+header::before { content: '👶'; position: absolute; font-size: 200px; opacity: 0.05; top: -30px; left: -20px; }
+header::after { content: '🦷'; position: absolute; font-size: 150px; opacity: 0.05; bottom: -20px; right: -10px; }
+
+.hero-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: #1a1a00;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: white;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+header h1 em { color: #fbcfe8; font-style: normal; }
+header p { color: #e9d5ff; font-size: 0.95rem; max-width: 560px; margin: 0 auto; }
+
+/* NAV */
+nav {
+  background: #083e52;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: color 0.2s; }
+nav a:hover, nav a.active { color: #00d4ff; }
+
+/* TRANSLATE */
+.translate-bar {
+  background: white;
+  padding: 8px 20px;
+  text-align: right;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* AGE STRIP */
+.age-nav {
+  background: white;
+  border-bottom: 2px solid var(--border);
+  padding: 12px 20px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.age-btn {
+  background: var(--cream);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--text);
+}
+.age-btn:hover, .age-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* LAYOUT */
+.page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+}
+@media(max-width: 768px) {
+  .page-wrapper { grid-template-columns: 1fr; }
+  nav a { margin: 0 6px; font-size: 0.75rem; }
+}
+
+/* SECTION CARD */
+.section-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 28px;
+  border: 1px solid var(--border);
+  box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+}
+.section-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--deep);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-card .subtitle {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+}
+
+/* ERUPTION CHART */
+.eruption-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 16px;
+}
+@media(max-width: 600px) { .eruption-layout { grid-template-columns: 1fr; } }
+
+.eruption-group {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.eruption-header {
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.eruption-header.milk { background: linear-gradient(90deg, #db2777, #ec4899); }
+.eruption-header.perm { background: linear-gradient(90deg, #7c3aed, #8b5cf6); }
+
+.eruption-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+.eruption-row:last-child { border-bottom: none; }
+.eruption-row:nth-child(even) { background: #fafbfc; }
+.tooth-name { font-weight: 600; color: var(--deep); }
+.tooth-age { color: var(--primary); font-weight: 600; font-size: 0.78rem; }
+.tooth-shed { color: var(--pink); font-size: 0.72rem; }
+.tooth-emoji { font-size: 18px; }
+
+/* VISUAL MOUTH DIAGRAM */
+.mouth-diagram {
+  background: linear-gradient(135deg, #fdf2f8, #f5f3ff);
+  border: 2px solid #e9d5ff;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+.mouth-diagram h3 { font-size: 1rem; color: var(--purple); margin-bottom: 16px; font-weight: 700; }
+.teeth-visual {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.jaw-row { display: flex; gap: 4px; justify-content: center; }
+.tooth-box {
+  width: 42px;
+  height: 50px;
+  border-radius: 8px 8px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 2px solid rgba(0,0,0,0.1);
+  position: relative;
+}
+.tooth-box:hover { transform: scale(1.15); z-index: 1; }
+.tooth-box.incisor { background: #dbeafe; color: #1e40af; }
+.tooth-box.canine { background: #fef3c7; color: #92400e; }
+.tooth-box.premolar { background: #dcfce7; color: #14532d; }
+.tooth-box.molar { background: #fce7f3; color: #9d174d; }
+.tooth-box .t-label { font-size: 0.55rem; margin-top: 2px; }
+.jaw-label { font-size: 0.75rem; color: var(--muted); font-weight: 600; margin: 4px 0; }
+
+.tooth-legend {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.72rem; }
+.legend-dot { width: 14px; height: 14px; border-radius: 3px; }
+
+/* MILESTONE TIMELINE */
+.timeline { position: relative; margin-top: 20px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #db2777, #7c3aed, #0a7ea4);
+  border-radius: 2px;
+}
+.timeline-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+}
+.tl-dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+.tl-content {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 18px;
+  flex: 1;
+}
+.tl-age {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.tl-content h4 { font-size: 0.92rem; font-weight: 600; color: var(--deep); margin-bottom: 4px; }
+.tl-content p { font-size: 0.8rem; color: var(--muted); margin: 0; }
+.tl-content ul { list-style: none; padding: 0; margin: 6px 0 0; }
+.tl-content ul li { font-size: 0.78rem; color: var(--muted); padding: 2px 0; }
+.tl-content ul li::before { content: '→ '; color: var(--primary); font-weight: 700; }
+
+/* INFO BOXES */
+.highlight {
+  background: linear-gradient(135deg, #eaf6fb, #f0fdf4);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 0.88rem;
+}
+.highlight strong { color: var(--primary-dark); }
+.warning {
+  background: var(--orange-light);
+  border-left: 4px solid var(--orange);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 14px 0;
+  font-size: 0.85rem;
+  color: #7c2d12;
+}
+.tip-box {
+  background: var(--purple-light);
+  border-left: 4px solid var(--purple);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 14px 0;
+  font-size: 0.85rem;
+  color: #4c1d95;
+}
+
+/* CARE GRID */
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+@media(max-width: 600px) { .care-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width: 400px) { .care-grid { grid-template-columns: 1fr; } }
+
+.care-card {
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.care-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+.care-card .icon { font-size: 32px; margin-bottom: 10px; }
+.care-card h4 { font-size: 0.83rem; font-weight: 700; margin-bottom: 4px; }
+.care-card p { font-size: 0.73rem; color: var(--muted); }
+.care-card.pink { background: var(--pink-light); border-color: #fbcfe8; }
+.care-card.pink h4 { color: var(--pink); }
+.care-card.purple { background: var(--purple-light); border-color: #ddd6fe; }
+.care-card.purple h4 { color: var(--purple); }
+.care-card.teal { background: var(--teal-light); border-color: #99f6e4; }
+.care-card.teal h4 { color: var(--teal); }
+.care-card.orange { background: var(--orange-light); border-color: #fed7aa; }
+.care-card.orange h4 { color: var(--orange); }
+.care-card.green { background: var(--green-light); border-color: #86efac; }
+.care-card.green h4 { color: var(--green); }
+.care-card.blue { background: #eff6ff; border-color: #bfdbfe; }
+.care-card.blue h4 { color: #1d4ed8; }
+
+/* AGE CARDS */
+.age-section {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+}
+.age-header {
+  padding: 14px 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.age-body { padding: 18px 20px; background: white; }
+.age-body p { font-size: 0.85rem; color: var(--text); margin-bottom: 10px; }
+.age-body ul { list-style: none; padding: 0; }
+.age-body ul li {
+  font-size: 0.82rem;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+  color: var(--muted);
+}
+.age-body ul li:last-child { border-bottom: none; }
+.age-body ul li::before { content: '🔹'; flex-shrink: 0; }
+
+/* DO DONT */
+.do-dont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+@media(max-width: 500px) { .do-dont { grid-template-columns: 1fr; } }
+.do-box { background: var(--green-light); border: 1px solid #86efac; border-radius: 12px; padding: 18px; }
+.dont-box { background: #fef2f2; border: 1px solid #fca5a5; border-radius: 12px; padding: 18px; }
+.do-box h3 { color: var(--green); font-size: 0.9rem; margin-bottom: 12px; }
+.dont-box h3 { color: var(--red); font-size: 0.9rem; margin-bottom: 12px; }
+.do-box ul, .dont-box ul { list-style: none; padding: 0; }
+.do-box li, .dont-box li { font-size: 0.8rem; padding: 5px 0; border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; gap: 8px; }
+.do-box li:last-child, .dont-box li:last-child { border-bottom: none; }
+.do-box li::before { content: '✓'; color: var(--green); font-weight: 700; }
+.dont-box li::before { content: '✗'; color: var(--red); font-weight: 700; }
+
+/* SIGNS TABLE */
+.signs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+@media(max-width: 500px) { .signs-grid { grid-template-columns: 1fr; } }
+.sign-card {
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  display: flex;
+  gap: 12px;
+}
+.sign-card .s-icon { font-size: 26px; flex-shrink: 0; }
+.sign-card h4 { font-size: 0.85rem; font-weight: 600; color: var(--deep); margin-bottom: 4px; }
+.sign-card p { font-size: 0.75rem; color: var(--muted); margin: 0; }
+.sign-card.urgent { border-color: #fca5a5; background: #fef2f2; }
+.sign-card.urgent h4 { color: var(--red); }
+
+/* FAQ */
+.faq { background: white; border: 1px solid var(--border); border-radius: 10px; margin: 10px 0; overflow: hidden; }
+.faq-q { padding: 14px 18px; cursor: pointer; font-size: 0.88rem; font-weight: 600; color: var(--deep); display: flex; justify-content: space-between; align-items: center; }
+.faq-q:hover { background: var(--cream); }
+.faq-a { padding: 0 18px 14px; font-size: 0.82rem; color: var(--muted); display: none; border-top: 1px solid var(--border); padding-top: 12px; }
+.faq-a.open { display: block; }
+.faq-icon { transition: transform 0.3s; color: var(--primary); }
+.faq-icon.open { transform: rotate(180deg); }
+
+/* AD SLOT */
+.ad-slot {
+  background: linear-gradient(135deg, #fff9ee, #fffef5);
+  border: 1.5px dashed var(--gold);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin: 20px 0;
+}
+.ad-slot strong { display: block; color: var(--gold); font-size: 0.8rem; margin-bottom: 4px; }
+
+/* SIDEBAR */
+.sw { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 22px; margin-bottom: 22px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+.sw-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--deep); margin: 0 0 14px 0; padding-bottom: 10px; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 8px; }
+.appt-widget { background: linear-gradient(135deg, var(--deep), var(--primary)); color: white; border: none; text-align: center; }
+.appt-widget .sw-title { color: #7dd3f0; border-color: rgba(255,255,255,0.15); justify-content: center; }
+.appt-widget p { font-size: 0.85rem; opacity: 0.85; margin-bottom: 14px; }
+.appt-btn { display: block; padding: 11px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85rem; margin-bottom: 8px; transition: opacity 0.2s; text-align: center; }
+.appt-btn:hover { opacity: 0.9; }
+.appt-btn.call { background: var(--gold); color: white; }
+.appt-btn.whatsapp { background: #25D366; color: white; }
+.clinic-info { font-size: 0.75rem; opacity: 0.65; margin-top: 8px; }
+.quick-link { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text); font-size: 0.85rem; transition: color 0.2s; }
+.quick-link:last-child { border-bottom: none; }
+.quick-link:hover { color: var(--primary); }
+
+/* FOOTER */
+footer { background: #083e52; color: #94a3b8; text-align: center; padding: 28px 20px; font-size: 0.82rem; }
+footer a { color: #94a3b8; text-decoration: none; margin: 0 10px; }
+footer a:hover { color: #7dd3f0; }
+.footer-links { margin: 10px 0; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.section-card { animation: fadeUp 0.4s ease both; }
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/919376585486" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<header>
+  <div class="hero-badge">👶 Bachon ki Dental Health — Complete Guide</div>
+  <h1>Kids Dental Care —<br><em>Doodh se Pakke Daant tak</em></h1>
+  <p>Pehle dant se lekar teenage tak — har age ke liye poori jaankari ek jagah</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="rct.html">RCT</a>
+  <a href="implant.html">Implants</a>
+  <a href="braces.html">Braces</a>
+  <a href="denture.html">Denture</a>
+  <a href="postcore.html">Post & Core</a>
+  <a href="extraction.html">Extraction</a>
+  <a href="scaling.html">Scaling</a>
+  <a href="composite.html">Composite</a>
+  <a href="blog.html" style="color:#00d4ff;">📝 Blog</a>
+</nav>
+
+<div class="translate-bar">
+  <span>🌐 Translate:</span>
+  <div id="google_translate_element"></div>
+</div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,hi,bn,ta,te,ur,gu,pa' }, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- AGE NAVIGATION -->
+<div class="age-nav">
+  <span style="font-size:0.82rem; font-weight:600; color:var(--muted); margin-right:6px;">Jump to age:</span>
+  <button class="age-btn" onclick="document.getElementById('sec-infant').scrollIntoView({behavior:'smooth'})">0–1 Year</button>
+  <button class="age-btn" onclick="document.getElementById('sec-toddler').scrollIntoView({behavior:'smooth'})">1–3 Year</button>
+  <button class="age-btn" onclick="document.getElementById('sec-child').scrollIntoView({behavior:'smooth'})">4–6 Year</button>
+  <button class="age-btn" onclick="document.getElementById('sec-school').scrollIntoView({behavior:'smooth'})">7–12 Year</button>
+  <button class="age-btn" onclick="document.getElementById('sec-teen').scrollIntoView({behavior:'smooth'})">13+ Year</button>
+  <button class="age-btn" onclick="document.getElementById('sec-eruption').scrollIntoView({behavior:'smooth'})">📊 Eruption Chart</button>
+</div>
+
+<div class="page-wrapper">
+<main>
+
+  <!-- SECTION 1: WHY MILK TEETH MATTER -->
+  <div class="section-card">
+    <h2>🍼 Doodh ke Daant — Itne Zaroori Kyun Hain?</h2>
+    <p class="subtitle">Zyaadatar parents sochte hain "baby teeth toh girenge hi" — yeh soch galat aur nukseandeh hai</p>
+
+    <div class="highlight">
+      <strong>📌 Important Fact:</strong> Bachon mein 20 doodh ke daant hote hain. Yeh daant 6 mahine ki umar se aane shuru hote hain aur 6–7 saal ki umar tak rehte hain. Kuch daant 12–13 saal tak rehte hain. Itne lambe waqt mein inki dekhbhal bahut zaroori hai.
+    </div>
+
+    <div class="care-grid">
+      <div class="care-card pink">
+        <div class="icon">🗣️</div>
+        <h4>Bolne mein madad</h4>
+        <p>Doodh ke daant bache ko sahi bolna sikhate hain. Inke bina pronunciation affect hoti hai.</p>
+      </div>
+      <div class="care-card purple">
+        <div class="icon">🥗</div>
+        <h4>Khana chabaana</h4>
+        <p>Sahi nutrition ke liye khana theek se chabana zaroori hai — daant iske liye chahiye.</p>
+      </div>
+      <div class="care-card teal">
+        <div class="icon">📍</div>
+        <h4>Jagah bachate hain</h4>
+        <p>Milk teeth permanent teeth ke liye jagah reserve karte hain. Jaldi gire toh teeth crooked aate hain.</p>
+      </div>
+      <div class="care-card orange">
+        <div class="icon">😊</div>
+        <h4>Confidence</h4>
+        <p>Healthy teeth se smile achhi hoti hai — bache ki confidence badhti hai.</p>
+      </div>
+      <div class="care-card green">
+        <div class="icon">🦷</div>
+        <h4>Permanent teeth protect</h4>
+        <p>Baby teeth mein infection permanent teeth ko directly damage kar sakta hai (neeche develop ho rahe hain).</p>
+      </div>
+      <div class="care-card blue">
+        <div class="icon">🧠</div>
+        <h4>Jaw development</h4>
+        <p>Daaton se jaw bone develop hoti hai. Inka nahi hona ya jaldi girna jaw growth affect karta hai.</p>
+      </div>
+    </div>
+
+    <div class="warning">
+      ⚠️ <strong>India Research (ICMR):</strong> India mein 5 saal ki umar ke 52% bachon mein doodh ke daanton mein cavity paai gayi hai. Yeh global average se kaafi zyaada hai. Iska main karan — raat ko dudh bottle lekar sona, meethi cheezein, aur dental awareness ki kami.
+    </div>
+  </div>
+
+  <!-- SECTION 2: ERUPTION CHART -->
+  <div class="section-card" id="sec-eruption">
+    <h2>📊 Daant Aane ka Chart — Kab Kaun Sa Daant Aata Hai?</h2>
+    <p class="subtitle">Doodh ke daant (Milk/Primary) aur Pakke daant (Permanent/Secondary) ka poora schedule</p>
+
+    <div class="eruption-layout">
+      <!-- MILK TEETH -->
+      <div class="eruption-group">
+        <div class="eruption-header milk">🍼 Doodh ke Daant (Primary) — 20 Total</div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Central Incisor (Upper)</span>
+          <div style="text-align:right">
+            <div class="tooth-age">8–12 months</div>
+            <div class="tooth-shed">Girta: 6–7 saal</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Central Incisor (Lower)</span>
+          <div style="text-align:right">
+            <div class="tooth-age">6–10 months</div>
+            <div class="tooth-shed">Girta: 6–7 saal</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Lateral Incisor (Upper)</span>
+          <div style="text-align:right">
+            <div class="tooth-age">9–13 months</div>
+            <div class="tooth-shed">Girta: 7–8 saal</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Lateral Incisor (Lower)</span>
+          <div style="text-align:right">
+            <div class="tooth-age">10–16 months</div>
+            <div class="tooth-shed">Girta: 7–8 saal</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Canine / Cuspid</span>
+          <div style="text-align:right">
+            <div class="tooth-age">16–22 months</div>
+            <div class="tooth-shed">Girta: 10–12 saal</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">First Molar (Upper & Lower)</span>
+          <div style="text-align:right">
+            <div class="tooth-age">13–19 months</div>
+            <div class="tooth-shed">Girta: 9–11 saal</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Second Molar (Upper)</span>
+          <div style="text-align:right">
+            <div class="tooth-age">25–33 months</div>
+            <div class="tooth-shed">Girta: 10–12 saal</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Second Molar (Lower)</span>
+          <div style="text-align:right">
+            <div class="tooth-age">23–31 months</div>
+            <div class="tooth-shed">Girta: 11–13 saal</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PERMANENT TEETH -->
+      <div class="eruption-group">
+        <div class="eruption-header perm">🦷 Pakke Daant (Permanent) — 32 Total</div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Central Incisor</span>
+          <div style="text-align:right">
+            <div class="tooth-age">6–8 saal</div>
+            <div class="tooth-shed" style="color:#7c3aed;">Permanent ✓</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Lateral Incisor</span>
+          <div style="text-align:right">
+            <div class="tooth-age">7–9 saal</div>
+            <div class="tooth-shed" style="color:#7c3aed;">Permanent ✓</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Canine</span>
+          <div style="text-align:right">
+            <div class="tooth-age">9–10 saal</div>
+            <div class="tooth-shed" style="color:#7c3aed;">Permanent ✓</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">First Premolar</span>
+          <div style="text-align:right">
+            <div class="tooth-age">10–12 saal</div>
+            <div class="tooth-shed" style="color:#7c3aed;">Permanent ✓</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Second Premolar</span>
+          <div style="text-align:right">
+            <div class="tooth-age">10–12 saal</div>
+            <div class="tooth-shed" style="color:#7c3aed;">Permanent ✓</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">First Molar (6-year molar)</span>
+          <div style="text-align:right">
+            <div class="tooth-age">6–7 saal</div>
+            <div class="tooth-shed" style="color:#7c3aed;">Permanent ✓</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Second Molar (12-year molar)</span>
+          <div style="text-align:right">
+            <div class="tooth-age">11–13 saal</div>
+            <div class="tooth-shed" style="color:#7c3aed;">Permanent ✓</div>
+          </div>
+        </div>
+        <div class="eruption-row">
+          <span class="tooth-emoji">🦷</span>
+          <span class="tooth-name">Third Molar (Wisdom Tooth)</span>
+          <div style="text-align:right">
+            <div class="tooth-age">17–21 saal</div>
+            <div class="tooth-shed" style="color:#7c3aed;">May need removal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight" style="margin-top:20px;">
+      <strong>💡 Important:</strong> Yeh timings approximate hain. Har bache mein 3–6 mahine ka fark normal hai. Agar daant bahut jaldi ya bahut deri se aa rahe hain (6+ month delay) toh dentist se milein. Indian children mein often thoda later eruption hota hai jo normal hai.
+    </div>
+
+    <div class="tip-box">
+      <strong>🌟 "6-Year Molar" ke baare mein jaanein:</strong> Jab bache ke 6 saal ke daant aate hain, pehla permanent molar (First permanent molar) aa jaata hai — bina kisi milk tooth ke gire bina. Yeh bahut important daant hai aur inka khayal bahut zaroori hai. Bohot se parents confuse hote hain soochke yeh doodh ka daant hai — nahi, yeh permanent hai!
+    </div>
+  </div>
+
+  <div class="ad-slot">
+    <strong>📢 Advertisement</strong>
+    Google AdSense — In-Article Ad
+  </div>
+
+  <!-- SECTION 3: AGE-WISE CARE -->
+  <div class="section-card">
+    <h2>📅 Age-Wise Dental Care — Har Umar Ki Guide</h2>
+    <p class="subtitle">0 saal se 18 saal tak — har stage mein kya karna chahiye</p>
+
+    <div id="sec-infant" class="age-section">
+      <div class="age-header" style="background: linear-gradient(90deg, #db2777, #ec4899);">
+        👶 0 – 12 Months (Shishu Avastha)
+      </div>
+      <div class="age-body">
+        <p>Abhi daant nahi aaye — lekin oral care abhi se shuru karni chahiye.</p>
+        <ul>
+          <li>Har khilane ke baad ek saaf nami kapde se baby ke gums saaf karo</li>
+          <li>Raat ko feeding ke baad gums zaroor poochho — bacteria tabhi badhte hain</li>
+          <li>Bottle ko raat bhar muh mein mat rehne do — "Baby Bottle Decay" hoti hai</li>
+          <li>Pahla daant aate hi (usually 6-8 months) soft baby finger brush shuru karo</li>
+          <li>Pahle 1 saal ke andar ek baar dentist se milna recommend kiya jaata hai</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="sec-toddler" class="age-section">
+      <div class="age-header" style="background: linear-gradient(90deg, #7c3aed, #8b5cf6);">
+        🚼 1 – 3 Years (Toddler)
+      </div>
+      <div class="age-body">
+        <p>Is umar mein sabse zyaada doodh ke daant aate hain — 20 mein se 16 tak.</p>
+        <ul>
+          <li>Rice-grain size fluoride toothpaste shuru karo — sirf itni hi</li>
+          <li>Din mein 2 baar brush karo — khud karo aur bache ko sikhao</li>
+          <li>Juice aur sweet drinks avoid karo — paani aur doodh best hai</li>
+          <li>Raat ko sone se pehle brush zaroor karo — kuch mat khilaao baad mein</li>
+          <li>Bachha thumb/pacifier zyaada use kar raha ho toh dentist se poochho</li>
+          <li>Dentist ke paas regular checkup shuru karo — har 6 mahine</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="sec-child" class="age-section">
+      <div class="age-header" style="background: linear-gradient(90deg, #0d9488, #14b8a6);">
+        🧒 4 – 6 Years (Pre-School)
+      </div>
+      <div class="age-body">
+        <p>Is age mein milk teeth complete ho jaate hain aur permanent teeth ki preparation shuru hoti hai.</p>
+        <ul>
+          <li>Pea-size fluoride toothpaste — bache ko thukna sikhao, nighalna nahi</li>
+          <li>Parents abhi bhi supervise karein brushing — iss age mein bache proper nahi kar paate</li>
+          <li>Flossing shuru karo jab do daant paas-paas ho jaayein</li>
+          <li>School mein meetha tiffin avoid karo — ya brush ke saath bhejo</li>
+          <li>Sports mein mouthguard use karo</li>
+          <li>Pehle permanent molar (6-year molar) ka dhyan rakho — cavity-prone hota hai</li>
+          <li>Dentist se Dental Sealant ke baare mein poochho — permanent molars protect karta hai</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="sec-school" class="age-section">
+      <div class="age-header" style="background: linear-gradient(90deg, #ea580c, #f97316);">
+        🧑 7 – 12 Years (School Age — Mixed Dentition)
+      </div>
+      <div class="age-body">
+        <p>Yeh sabse important stage hai — doodh aur pakke dono daant saath mein hote hain. "Mixed Dentition" period.</p>
+        <ul>
+          <li>Daant girneka aur naye aane ka process monitor karo</li>
+          <li>Agar daant seedha nahi aa raha toh orthodontist se milein — braces ki timing check karein</li>
+          <li>Bache khud brushing karein par parents weekly check karein</li>
+          <li>Dono daant (milk + permanent) ek saath ka khayal rakho</li>
+          <li>6-year molar mein cavity bahut common — regular cleaning zaroori hai</li>
+          <li>Cold drinks, chips, candy — restrict karo school ke time pe</li>
+          <li>Muh se saas lena (mouth breathing) — yeh jaw development affect karta hai, dentist se baat karo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="sec-teen" class="age-section">
+      <div class="age-header" style="background: linear-gradient(90deg, #083e52, #0a7ea4);">
+        🧑‍🎓 13 – 18 Years (Teenager)
+      </div>
+      <div class="age-body">
+        <p>Ab permanent teeth almost complete hain. Wisdom teeth aane ki preparation, braces ka prime time.</p>
+        <ul>
+          <li>Agar braces ki zaroorat hai toh yeh best age hai — 12-14 years</li>
+          <li>Teenagers mein gum disease badhna shuru ho sakta hai (hormonal changes) — regular cleaning zaroori</li>
+          <li>Sports mouthguard must hai contact sports mein</li>
+          <li>Agar braces hain toh brushing extra careful karni hogi</li>
+          <li>Wisdom teeth ka X-ray 17-18 saal mein zaroor karwao</li>
+          <li>Cola, energy drinks, junk food — long-term enamel damage karte hain</li>
+          <li>Self-care ki habit abhi se dalein — parents control se zyaada self-discipline chahiye</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: TEETHING -->
+  <div class="section-card">
+    <h2>😢 Teething Dard — Kya Normal Hai, Kya Nahi?</h2>
+    <p class="subtitle">Daant aane par bache ko takleef hoti hai — jaanein kya karein</p>
+
+    <div class="signs-grid">
+      <div class="sign-card">
+        <span class="s-icon">😤</span>
+        <div>
+          <h4>Zyaada drooling (thuk aana)</h4>
+          <p>Bilkul normal hai. Bib lagao — skin rash rokne ke liye muh poochho.</p>
+        </div>
+      </div>
+      <div class="sign-card">
+        <span class="s-icon">😭</span>
+        <div>
+          <h4>Chidchidahat aur rona</h4>
+          <p>Gums mein pressure relief ke liye bache zyaada rotate hote hain. Normal.</p>
+        </div>
+      </div>
+      <div class="sign-card">
+        <span class="s-icon">🍬</span>
+        <div>
+          <h4>Cheezon ko chababit karna</h4>
+          <p>Teething ring ya chilled (frozen nahi) soft toy dein. Pressure se relief milta hai.</p>
+        </div>
+      </div>
+      <div class="sign-card">
+        <span class="s-icon">😴</span>
+        <div>
+          <h4>Neend mein takleef</h4>
+          <p>Raat ko dard zyaada feel hota hai. Gums par thanda kapda lagao — cold compress.</p>
+        </div>
+      </div>
+      <div class="sign-card urgent">
+        <span class="s-icon">🤒</span>
+        <div>
+          <h4>High Fever (100°F+) — Urgent</h4>
+          <p>Teething se sirf mild fever hoti hai (99°F tak). High fever means kuch aur — doctor se milein.</p>
+        </div>
+      </div>
+      <div class="sign-card urgent">
+        <span class="s-icon">🤧</span>
+        <div>
+          <h4>Diarrhea ya heavy vomiting</h4>
+          <p>Yeh teething se NAHI hota. Yeh infection ke signs hain — medical help lein.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight" style="margin-top:16px;">
+      <strong>✅ Safe Teething Remedies:</strong> Chilled (refrigerator mein rakha, freezer mein nahi) silicone teething ring, clean wet cloth, gentle gum massage with finger. Aspirin ya alcohol-based gels bilkul mat lagao — dangerous hain.
+    </div>
+    <div class="warning">
+      ⚠️ <strong>Avoid karo:</strong> Teething necklaces (choking risk), OTC benzocaine gels (FDA ne warn kiya hai), amber teething beads — yeh sab unsafe hain aur scientific proof nahi hai.
+    </div>
+  </div>
+
+  <div class="ad-slot"><strong>📢 Advertisement</strong> Google AdSense — Mid-Page Ad</div>
+
+  <!-- SECTION 5: CAVITY PREVENTION -->
+  <div class="section-card">
+    <h2>🛡️ Bachon mein Cavity Prevention</h2>
+    <p class="subtitle">India mein 5 saal ke 52% bachon mein cavity — yeh rokna possible hai</p>
+
+    <div class="do-dont">
+      <div class="do-box">
+        <h3>✅ Karo</h3>
+        <ul>
+          <li>Paani zyaada dein — juice nahi</li>
+          <li>Meethe ke baad kulla karwao</li>
+          <li>Dahi aur cheese — calcium se teeth strong</li>
+          <li>Seb aur gajar — natural teeth cleaner</li>
+          <li>Raat ko brush ke baad kuch nahi</li>
+          <li>Dentist se sealant lagwao (6-12 saal mein)</li>
+          <li>Regular 6-monthly checkup</li>
+          <li>Fluoride toothpaste use karo — age ke hisaab se amount</li>
+        </ul>
+      </div>
+      <div class="dont-box">
+        <h3>❌ Mat karo</h3>
+        <ul>
+          <li>Sone se pehle dudh bottle nahi — "Nursing Bottle Caries"</li>
+          <li>Packaged juice, cold drinks avoid karo</li>
+          <li>Toffee, eclairs, chewing gum — worst for teeth</li>
+          <li>Biscuits aur chips — sugar + starch = cavity</li>
+          <li>Spoon ya cup share mat karo — bacteria transfer hota hai</li>
+          <li>Thumb sucking 4-5 saal ke baad mat hone do</li>
+          <li>School canteen ka junk food avoid karo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <strong>🌟 Dental Sealant kya hai?</strong> Yeh ek thin plastic coating hai jo permanent back teeth (molars) ke upar lagayi jaati hai. Yeh teeth ki grooves ko cover kar deti hai jahan cavity hone ka sabse zyaada chance hota hai. 6-12 saal ke bacchon ke liye highly recommended hai. Ek baar lagate hain — kaafi saal protect karta hai.
+    </div>
+  </div>
+
+  <!-- SECTION 6: MILK TEETH PROBLEMS -->
+  <div class="section-card">
+    <h2>⚠️ Milk Teeth ki Common Problems</h2>
+    <p class="subtitle">Inhe ignore mat karein — yeh permanent teeth ko affect karte hain</p>
+
+    <div class="age-section" style="margin-bottom:14px;">
+      <div class="age-header" style="background: linear-gradient(90deg, #dc2626, #ef4444);">
+        🦠 Baby Bottle Tooth Decay (Nursing Caries)
+      </div>
+      <div class="age-body">
+        <p>Yeh India mein 0–3 saal ke bachon ki sabse common dental problem hai. Raat bhar bottle mein dudh, juice ya koi meetha peya dene se aamne-samne ke upar ke daant toot jaate hain.</p>
+        <ul>
+          <li>Dudh mein bhi natural sugar (lactose) hoti hai jo cavity banati hai</li>
+          <li>Pehle white spots dikhte hain, phir brown, phir daant toot jaata hai</li>
+          <li>Prevention: Sone se pehle feed karke muh saaf karo — bottle raat bhar mat dein</li>
+          <li>Agar ho gaya: Turant dentist ke paas jaao — treatment possible hai</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="age-section" style="margin-bottom:14px;">
+      <div class="age-header" style="background: linear-gradient(90deg, #7c3aed, #8b5cf6);">
+        📏 Teeth Crowding — Daant Seedhe Kyun Nahi Aate?
+      </div>
+      <div class="age-body">
+        <p>Agar milk teeth jaldi gir gaye ya agar jaw mein jagah kam hai toh permanent teeth crooked aate hain.</p>
+        <ul>
+          <li>Space Maintainer: Agar milk tooth jaldi gire toh dentist space maintainer laga sakta hai</li>
+          <li>7-8 saal ki umar mein ek baar orthodontic evaluation zaroori hai</li>
+          <li>Braces ya clear aligners 12-14 saal mein best results dete hain</li>
+          <li>Thumb sucking aur pacifier zyaada use karna bhi crowding badhata hai</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="age-section">
+      <div class="age-header" style="background: linear-gradient(90deg, #0d9488, #14b8a6);">
+        😮 Muh se Saas Lena (Mouth Breathing)
+      </div>
+      <div class="age-body">
+        <p>Bahut se Indian parents notice nahi karte ki baccha raat ko muh se saas leta hai. Yeh ek serious issue hai.</p>
+        <ul>
+          <li>Muh ke andar dryness se cavity ka risk badh jaata hai</li>
+          <li>Jaw development affect hota hai — long face syndrome ho sakta hai</li>
+          <li>Teeth crowding ka risk badhta hai</li>
+          <li>Reason: adenoids, tonsils, allergies, deviated septum</li>
+          <li>Dentist se baat karo — ENT specialist ki bhi zaroorat ho sakti hai</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7: WHEN TO SEE DENTIST -->
+  <div class="section-card">
+    <h2>🚨 Dentist ke Paas Kab Jaayein — Emergency Signs</h2>
+    <p class="subtitle">Yeh signs dikhein toh usi din jaao — wait mat karo</p>
+
+    <div class="signs-grid">
+      <div class="sign-card urgent">
+        <span class="s-icon">😱</span>
+        <div><h4>Daant mein gehri chot lagi</h4><p>Daant toot gaya, hilne laga, ya rang badal gaya — turant jaao.</p></div>
+      </div>
+      <div class="sign-card urgent">
+        <span class="s-icon">🔥</span>
+        <div><h4>Gum mein sujan ya puss</h4><p>Yeh abscess ho sakta hai — serious infection. Isi din treatment chahiye.</p></div>
+      </div>
+      <div class="sign-card urgent">
+        <span class="s-icon">😭</span>
+        <div><h4>Laga ke rehne wala dard</h4><p>Aata-jaata dard nahi — agar 2 din se zyaada dard ho toh zaroor jaao.</p></div>
+      </div>
+      <div class="sign-card urgent">
+        <span class="s-icon">⬛</span>
+        <div><h4>Daant ka rang badalna</h4><p>Black, brown ya grey ring — cavity ya trauma sign. Check karwao.</p></div>
+      </div>
+      <div class="sign-card">
+        <span class="s-icon">📅</span>
+        <div><h4>Daant 15+ mahine mein nahi aaya</h4><p>Schedule se 6+ mahine late aana concern ka karan ho sakta hai.</p></div>
+      </div>
+      <div class="sign-card">
+        <span class="s-icon">🌀</span>
+        <div><h4>Daant seedha nahi aa raha</h4><p>Daant ke neeche se aur doosri jagah se — dentist se guidance lein.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 8: FAQ -->
+  <div class="section-card">
+    <h2>❓ Parents ke Common Sawaal (FAQ)</h2>
+    <p class="subtitle">Sabse zyaada pooche jaane wale sawaal — clear answers ke saath</p>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Kya baby ke doodh ke dant mein cavity ka ilaaj zaroori hai? <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-a">Haan, bilkul zaroori hai. Milk teeth mein infection permanent teeth ke germs ko directly damage kar sakta hai. Untreated cavity se pain, infection, aur early tooth loss hoti hai jo permanent teeth ki position affect karta hai. RCT (Pulpotomy — baby version) bhi possible hai milk teeth mein.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Kitni umar mein bache ko dentist ke paas le jaana chahiye? <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-a">Pehle dant aate hi (usually 6-8 months) ya latest 1 saal ki umar tak pehli baar dentist ke paas jaana chahiye. India mein zyaadatar parents 3-4 saal tak wait karte hain jab problem ho jaati hai — yeh galat approach hai. Prevention hamesha ilaaj se behtar aur sasta hai.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Kaun si age mein braces sahi rehte hain? <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-a">7-8 saal ki umar mein ek baar orthodontic evaluation zaroor karwao. Agar problem serious hai toh 8-10 mein phase 1 treatment ho sakta hai. Main braces treatment 11-14 saal ke beech best results deta hai jab jaw grow ho raha hota hai aur teeth zyaada easily move karte hain.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Kya milk teeth mein fluoride toothpaste safe hai? <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-a">Haan, safe hai — lekin amount ka dhyan rakho. 0-3 saal: rice grain size (smear). 3-6 saal: pea size. 6+ saal: pea size par bada. Fluoride toothpaste cavity rokti hai — WHO aur IDA dono recommend karte hain. Sirf dhyan rakho bachha nighale nahi.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Doodh ka daant hila raha hai — kya ghar par nikaalein? <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-a">Agar daant khud hil raha hai aur loose hai, toh bache ko khud hilane dein — woh naturally nikal jaayega. Agar bahut loose hai aur taklif ho rahi hai toh dentist se nikaala ja sakta hai easily. Dhage se ya zabardasti mat karo — agar root abhi bachi ho toh damagkar sakta hai.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Milk tooth gir gaya — neeche kuch nahi dikh raha. Kya karein? <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-a">Agar milk tooth apne time par gira (6-7 saal mein incisors) toh permanent tooth 3-6 mahine mein aa jaayega. Agar 9-12 mahine mein nahi aaya toh dentist se milein — X-ray se check karein ki permanent tooth hai ya nahi. Kabhi kabhi permanent tooth andar hi dab jaata hai (impacted) toh treatment chahiye.</div>
+    </div>
+  </div>
+
+  <div class="ad-slot"><strong>📢 Advertisement</strong> Google AdSense — Bottom Ad</div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside>
+  <div class="sw appt-widget">
+    <h3 class="sw-title"><i class="far fa-calendar-check"></i> Kids Checkup Book Karein</h3>
+    <p>Aapke bachche ka pehla dental checkup karwaaein — painless aur friendly environment.</p>
+    <a href="tel:9376585486" class="appt-btn call"><i class="fas fa-phone"></i> Call: 9376585486</a>
+    <a href="https://wa.me/919376585486" class="appt-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <p class="clinic-info">📍 Near Eid Gah Bari, Bikaner</p>
+  </div>
+
+  <div class="ad-slot"><strong>📢 Advertisement</strong> AdSense Sidebar (300×250)</div>
+
+  <div class="sw">
+    <h3 class="sw-title">⚡ Quick Age Reference</h3>
+    <div style="font-size:0.8rem;">
+      <div style="padding:8px 0; border-bottom:1px solid var(--border);">🍼 <strong>6-8 months:</strong> Pehla dant</div>
+      <div style="padding:8px 0; border-bottom:1px solid var(--border);">👶 <strong>2.5 years:</strong> Sabhi 20 milk teeth</div>
+      <div style="padding:8px 0; border-bottom:1px solid var(--border);">🧒 <strong>6-7 years:</strong> Pehla permanent dant</div>
+      <div style="padding:8px 0; border-bottom:1px solid var(--border);">🧑 <strong>7-8 years:</strong> Orthodontic eval</div>
+      <div style="padding:8px 0; border-bottom:1px solid var(--border);">🧑 <strong>11-14 years:</strong> Braces prime time</div>
+      <div style="padding:8px 0;">🧑‍🎓 <strong>17-21 years:</strong> Wisdom teeth</div>
+    </div>
+  </div>
+
+  <div class="sw">
+    <h3 class="sw-title">🔗 Related Pages</h3>
+    <a href="oral-hygiene.html" class="quick-link"><span>🪥</span> Oral Hygiene Guide</a>
+    <a href="braces.html" class="quick-link"><span>😁</span> Braces Guide</a>
+    <a href="extraction.html" class="quick-link"><span>🦷</span> Extraction Guide</a>
+    <a href="composite.html" class="quick-link"><span>✨</span> Composite Filling</a>
+    <a href="blog.html" class="quick-link"><span>📝</span> Blog Home</a>
+  </div>
+
+  <div class="ad-slot"><strong>📢 Advertisement</strong> AdSense Sidebar (300×600)</div>
+</aside>
+</div>
+
+<footer>
+  <strong style="color:#7dd3f0; font-family:'Playfair Display',serif;">Deeksha Dental Care — Kids Dental Guide</strong>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="oral-hygiene.html">Oral Hygiene</a>
+    <a href="braces.html">Braces</a>
+  </div>
+  <p style="margin-top:8px;">📞 9376585486 | ✉ ddccare2000@gmail.com | 📍 Near Eid Gah Bari, Bikaner</p>
+  <p style="font-size:0.7rem; opacity:0.6; margin-top:8px;">⚠️ Yeh jaankari educational purpose ke liye hai. Kisi bhi dental problem ke liye trained dentist se milein.</p>
+  <p style="margin-top:8px;">© 2026 Deeksha Dental Care. All Rights Reserved.</p>
+</footer>
+
+<div class="chatbot-button" onclick="toggleChatbot()"><i class="fas fa-comment-dots"></i></div>
+<div class="chatbot-container" id="chatbotContainer">
+  <div class="chatbot-header">
+    <span><i class="fas fa-tooth"></i> Dental Assistant</span>
+    <i class="fas fa-times" onclick="closeChatbot()"></i>
+  </div>
+  <div class="chatbot-messages" id="chatbotMessages">
+    <div class="chat-message bot-message">
+      👶 Kids dental care ke baare mein koi sawaal? Poochein!
+    </div>
+  </div>
+  <div class="chatbot-input-area">
+    <input type="text" id="chatbotInput" placeholder="Type your question..." onkeypress="handleKeyPress(event)">
+    <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+<script src="chatbot.js"></script>
+
+<script>
+function toggleFaq(el) {
+  const answer = el.nextElementSibling;
+  const icon = el.querySelector('.faq-icon');
+  answer.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+</script>
+</body>
+</html>
