@@ -1005,3 +1005,29 @@ function showInjectionInfo(type) {
     document.getElementById('infoBestFor').textContent = 'Failed anesthesia, "hot tooth", supplemental technique';
     document.getElementById('infoOnset').textContent = '1-2 minutes';
     document.getElementById('infoDuration').textContent = '30
+      <!-- Chatbot HTML -->
+<div class="chatbot-button" onclick="toggleChatbot()">
+    <i class="fas fa-comment-dots"></i>
+</div>
+
+<div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+        <span><i class="fas fa-tooth"></i> Dental Assistant</span>
+        <i class="fas fa-times" onclick="closeChatbot()"></i>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+        <div class="chat-message bot-message">
+            <i class="fas fa-tooth" style="margin-right: 8px; color: #0a7ea4;"></i>
+            👋 Welcome to Deeksha Dental Care! How can I help you today?
+        </div>
+    </div>
+    <div class="chatbot-input-area">
+        <input type="text" id="chatbotInput" placeholder="Type your question..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<!-- Link chatbot JavaScript -->
+<script src="chatbot.js"></script>
+</body>
+</html>
