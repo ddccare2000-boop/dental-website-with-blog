@@ -195,6 +195,121 @@ ul { padding-left:20px; }
   }
 }
 </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+  /* ===== PREMIUM HEADER STYLES ===== */
+  .premium-header {
+    background: linear-gradient(135deg, #040f1a 0%, #083e52 40%, #0a7ea4 100%);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .premium-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .premium-header::after {
+    content: '🦷';
+    position: absolute;
+    font-size: 260px;
+    opacity: 0.04;
+    right: -40px;
+    top: -40px;
+    transform: rotate(-15deg);
+    line-height: 1;
+  }
+  .header-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 22px 40px;
+    gap: 20px;
+  }
+  .header-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .header-logo-icon {
+    width: 52px; height: 52px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.7rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    flex-shrink: 0;
+  }
+  .header-logo-text h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem; font-weight: 800;
+    color: white; margin: 0;
+    letter-spacing: -0.5px; line-height: 1.1;
+  }
+  .header-logo-text .tagline {
+    font-size: 0.75rem; color: rgba(255,255,255,0.6);
+    font-weight: 400; letter-spacing: 0.5px; display: block; margin-top: 2px;
+  }
+  .header-contact { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+  .header-contact .phone-btn {
+    color: white; text-decoration: none; font-size: 0.9rem; font-weight: 700;
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.12);
+    padding: 9px 18px; border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.5px;
+  }
+  .header-contact .phone-btn:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+  .header-contact .email-txt {
+    font-size: 0.76rem; color: rgba(255,255,255,0.55);
+    font-family: 'Outfit', sans-serif;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .header-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    position: relative; z-index: 2;
+  }
+  .premium-nav {
+    background: rgba(4, 15, 26, 0.97);
+    position: sticky; top: 0; z-index: 1000;
+    border-bottom: 1px solid rgba(10,126,164,0.35);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center;
+    padding: 0 20px;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .premium-nav a {
+    color: rgba(255,255,255,0.68);
+    text-decoration: none; font-weight: 500;
+    font-size: 0.81rem;
+    font-family: 'Outfit', sans-serif;
+    padding: 14px 13px;
+    white-space: nowrap;
+    transition: all 0.25s;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 0.3px;
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .premium-nav a:hover, .premium-nav a.active {
+    color: white; border-bottom-color: #0a7ea4;
+  }
+  .premium-nav a.blog-special { color: #7dd3f0; }
+  .premium-nav a.blog-special:hover { color: white; }
+  @media (max-width: 768px) {
+    .header-inner { padding: 16px 18px; flex-wrap: wrap; }
+    .header-logo-text h1 { font-size: 1.1rem; }
+    .premium-nav a { font-size: 0.76rem; padding: 12px 9px; }
+  }
+  </style>
 </head>
 
 <body>
@@ -225,37 +340,60 @@ ul { padding-left:20px; }
   </div>
 </div>
 
-<header>
-<h1>Root Canal Treatment (RCT)</h1>
-<p>Comprehensive Clinical Guide by Dr. Dost</p>
+
+<header class="premium-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <div class="header-logo-icon">🦷</div>
+      <div class="header-logo-text">
+        <h1>Deeksha Dental Care</h1>
+        <span class="tagline">📍 Near Eid Gah Bari, Bikaner — Rajasthan</span>
+      </div>
+    </a>
+    <div class="header-contact">
+      <a href="tel:+919376585486" class="phone-btn"><i class="fas fa-phone-alt"></i> 93765 85486</a>
+      <span class="email-txt"><i class="fas fa-envelope"></i> ddccare2000@gmail.com</span>
+    </div>
+  </div>
+  <div class="header-divider"></div>
 </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="rct.html">RCT</a>
-<a href="implant.html">Implants</a>
-<a href="braces.html">Braces</a>
-<a href="denture.html">Denture</a>
-<a href="postcore.html">Post & Core</a>
-<a href="extraction.html">Extraction</a>
-<a href="scaling.html">Scaling</a>
-<a href="composite.html">Composite</a>
+
+<nav class="premium-nav">
+  <div class="nav-inner">
+    <a href="index.html">🏠 Home</a>
+    <a href="rct.html">🦷 RCT</a>
+    <a href="implant.html">🔩 Implants</a>
+    <a href="braces.html">😁 Braces</a>
+    <a href="denture.html">🦴 Denture</a>
+    <a href="postcore.html">🔧 Post &amp; Core</a>
+    <a href="extraction.html">🚨 Extraction</a>
+    <a href="scaling.html">🪥 Scaling</a>
+    <a href="composite.html">✨ Composite</a>
+    <a href="kids-dental.html">👶 Kids</a>
+    <a href="oral-hygiene.html">💚 Oral Hygiene</a>
+    <a href="implant-vs-bridge.html">⚖️ Implant vs Bridge</a>
+    <a href="blog.html" class="blog-special">📝 Blog</a>
+  </div>
 </nav>
 
-<!-- Multi Language -->
-<div style="text-align:right; padding:10px 20px;">
-<div id="google_translate_element"></div>
-</div>
 
+
+<div style="text-align:right; padding:8px 20px; background:#f4f9fb; border-bottom:1px solid #d4eaf3; font-size:0.8rem;">
+  <span style="color:#666; margin-right:8px;">🌐 Translate:</span>
+  <div id="google_translate_element" style="display:inline-block;"></div>
+</div>
 <script>
 function googleTranslateElementInit() {
-new google.translate.TranslateElement({
-pageLanguage: 'en',
-includedLanguages: 'en,hi,bn,ta,te,ur,gu,pa'
-}, 'google_translate_element');
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,hi,bn,ta,te,ur,gu,pa',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
 }
 </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 
 <div class="container">
 
@@ -403,6 +541,82 @@ A "Hot Tooth" refers to a tooth with irreversible pulpitis that is extremely pai
 <div class="faq">
 <h4 onclick="toggleFAQ(this)">Is crown necessary after RCT?</h4>
 <p>Yes, especially for back teeth to prevent fracture.</p>
+</div>
+
+<!-- ===== WORLD-CLASS RCT INSIGHTS ===== -->
+<h2>🌍 What Top Dental Experts Worldwide Recommend</h2>
+<div class="card">
+  <p>Leading endodontists from premier dental institutions share consistent evidence-based protocols that our clinic follows:</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:20px;">
+    <div style="background:#eaf6fb;padding:18px;border-radius:14px;border-left:4px solid #0a7ea4;">
+      <h4 style="color:#0a7ea4;margin:0 0 8px;">🔬 Rotary NiTi Files</h4>
+      <p style="margin:0;font-size:0.9rem;">Top clinicians recommend nickel-titanium rotary instruments for canal preparation — faster, safer, and more precise than manual stainless steel files. Reduces procedural errors significantly.</p>
+    </div>
+    <div style="background:#eaf6fb;padding:18px;border-radius:14px;border-left:4px solid #0a7ea4;">
+      <h4 style="color:#0a7ea4;margin:0 0 8px;">📡 Electronic Apex Locator</h4>
+      <p style="margin:0;font-size:0.9rem;">Expert consensus: electronic apex locators provide 95%+ accuracy in working length determination, reducing radiation exposure and improving outcomes versus radiographic method alone.</p>
+    </div>
+    <div style="background:#eaf6fb;padding:18px;border-radius:14px;border-left:4px solid #0a7ea4;">
+      <h4 style="color:#0a7ea4;margin:0 0 8px;">💧 Sodium Hypochlorite Irrigation</h4>
+      <p style="margin:0;font-size:0.9rem;">The gold standard irrigant worldwide. Used at 2.5–5.25% concentration, it dissolves organic tissue, kills bacteria including biofilm — proven in clinical studies spanning decades.</p>
+    </div>
+    <div style="background:#eaf6fb;padding:18px;border-radius:14px;border-left:4px solid #0a7ea4;">
+      <h4 style="color:#0a7ea4;margin:0 0 8px;">🏆 Single-Visit vs Multi-Visit</h4>
+      <p style="margin:0;font-size:0.9rem;">Research from top universities shows single-visit RCT has equal or better success rates for vital (non-infected) teeth compared to multi-visit protocol — less patient discomfort, fewer appointments.</p>
+    </div>
+    <div style="background:#eaf6fb;padding:18px;border-radius:14px;border-left:4px solid #0a7ea4;">
+      <h4 style="color:#0a7ea4;margin:0 0 8px;">👑 Crown After RCT — Why Essential</h4>
+      <p style="margin:0;font-size:0.9rem;">Studies show that posterior teeth without crowns after RCT are 6× more likely to fracture within 2 years. A zirconia or metal-ceramic crown provides essential fracture resistance and seals the tooth from reinfection.</p>
+    </div>
+    <div style="background:#eaf6fb;padding:18px;border-radius:14px;border-left:4px solid #0a7ea4;">
+      <h4 style="color:#0a7ea4;margin:0 0 8px;">🧬 Success Rate</h4>
+      <p style="margin:0;font-size:0.9rem;">Well-performed RCT has a documented 95%+ success rate over 10 years. Failure is typically due to coronal leakage (missing crown), missed canals, or vertical root fracture — all preventable with proper protocol.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== POST-RCT DIET ===== -->
+<h2>🍽️ What to Eat & Avoid After Root Canal</h2>
+<div class="card">
+  <p style="background:#eaf6fb;padding:14px 18px;border-radius:10px;border-left:4px solid #0a7ea4;"><strong>Important:</strong> After RCT, the tooth is temporarily or permanently restored. Proper diet in the first 48–72 hours is critical for healing and preventing restoration failure.</p>
+  
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;">
+    <div style="background:#ecfdf5;padding:20px;border-radius:14px;border:1px solid #86efac;">
+      <h4 style="color:#059669;margin:0 0 12px;">✅ Safe to Eat</h4>
+      <ul style="margin:0;padding-left:18px;font-size:0.9rem;line-height:1.9;">
+        <li>Soft cooked rice, khichdi, dal</li>
+        <li>Yogurt, curd, buttermilk</li>
+        <li>Mashed potatoes, bananas</li>
+        <li>Soup, broth, warm (not hot) liquids</li>
+        <li>Soft boiled eggs, paneer</li>
+        <li>Lukewarm milk, smoothies</li>
+        <li>Idli, upma, soft rotis</li>
+      </ul>
+    </div>
+    <div style="background:#fef2f2;padding:20px;border-radius:14px;border:1px solid #fca5a5;">
+      <h4 style="color:#dc2626;margin:0 0 12px;">❌ Avoid These</h4>
+      <ul style="margin:0;padding-left:18px;font-size:0.9rem;line-height:1.9;">
+        <li>Hard, crunchy foods (chips, nuts, raw carrots)</li>
+        <li>Very hot or very cold drinks/food</li>
+        <li>Sticky sweets (toffees, gum, jalebi)</li>
+        <li>Chewing on the treated side</li>
+        <li>Alcohol and carbonated drinks</li>
+        <li>Tough meat, hard bread crust</li>
+        <li>Popcorn, hard papad</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div style="margin-top:20px;">
+    <div style="background:#fff3cd;padding:16px;border-radius:12px;border-left:4px solid #e6a817;">
+      <h4 style="color:#856404;margin:0 0 6px;">⏱️ Timeline Guide</h4>
+      <p style="margin:0;font-size:0.88rem;"><strong>First 24 hours:</strong> Only soft foods, no chewing on treated tooth. <strong>Days 2–3:</strong> Mild improvement, still avoid hard/crunchy. <strong>After crown placement:</strong> Normal eating resumes within a week. <strong>Always:</strong> If temporary filling — avoid very sticky or hard food until permanent crown is placed.</p>
+    </div>
+  </div>
+  
+  <p style="margin-top:16px;font-size:0.88rem;color:#555;">
+    👉 <a href="post-rct-diet.html" style="color:#0a7ea4;font-weight:600;">Read our complete post-RCT diet guide →</a>
+  </p>
 </div>
 
 <div class="cta">

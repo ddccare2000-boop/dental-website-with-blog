@@ -703,6 +703,121 @@ footer a:hover { color: #7dd3f0; }
   margin: 10px auto 0;
 }
 </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+  /* ===== PREMIUM HEADER STYLES ===== */
+  .premium-header {
+    background: linear-gradient(135deg, #040f1a 0%, #083e52 40%, #0a7ea4 100%);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .premium-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .premium-header::after {
+    content: '🦷';
+    position: absolute;
+    font-size: 260px;
+    opacity: 0.04;
+    right: -40px;
+    top: -40px;
+    transform: rotate(-15deg);
+    line-height: 1;
+  }
+  .header-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 22px 40px;
+    gap: 20px;
+  }
+  .header-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .header-logo-icon {
+    width: 52px; height: 52px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.7rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    flex-shrink: 0;
+  }
+  .header-logo-text h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem; font-weight: 800;
+    color: white; margin: 0;
+    letter-spacing: -0.5px; line-height: 1.1;
+  }
+  .header-logo-text .tagline {
+    font-size: 0.75rem; color: rgba(255,255,255,0.6);
+    font-weight: 400; letter-spacing: 0.5px; display: block; margin-top: 2px;
+  }
+  .header-contact { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+  .header-contact .phone-btn {
+    color: white; text-decoration: none; font-size: 0.9rem; font-weight: 700;
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.12);
+    padding: 9px 18px; border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.5px;
+  }
+  .header-contact .phone-btn:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+  .header-contact .email-txt {
+    font-size: 0.76rem; color: rgba(255,255,255,0.55);
+    font-family: 'Outfit', sans-serif;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .header-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    position: relative; z-index: 2;
+  }
+  .premium-nav {
+    background: rgba(4, 15, 26, 0.97);
+    position: sticky; top: 0; z-index: 1000;
+    border-bottom: 1px solid rgba(10,126,164,0.35);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center;
+    padding: 0 20px;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .premium-nav a {
+    color: rgba(255,255,255,0.68);
+    text-decoration: none; font-weight: 500;
+    font-size: 0.81rem;
+    font-family: 'Outfit', sans-serif;
+    padding: 14px 13px;
+    white-space: nowrap;
+    transition: all 0.25s;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 0.3px;
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .premium-nav a:hover, .premium-nav a.active {
+    color: white; border-bottom-color: #0a7ea4;
+  }
+  .premium-nav a.blog-special { color: #7dd3f0; }
+  .premium-nav a.blog-special:hover { color: white; }
+  @media (max-width: 768px) {
+    .header-inner { padding: 16px 18px; flex-wrap: wrap; }
+    .header-logo-text h1 { font-size: 1.1rem; }
+    .premium-nav a { font-size: 0.76rem; padding: 12px 9px; }
+  }
+  </style>
 </head>
 <body>
 
@@ -712,34 +827,50 @@ footer a:hover { color: #7dd3f0; }
 </a>
 
 <!-- HEADER -->
-<header>
-  <div class="blog-hero-badge">🦷 Dental Expert Blog — Bikaner</div>
-  <h1>Daanto ki <em>Sahi Dekhbhal</em><br>ab Hindi mein!</h1>
-  <p>Expert tips, honest advice — Root Canal se lekar Implants tak, sab kuch aasaan bhasha mein</p>
+
+<header class="premium-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <div class="header-logo-icon">🦷</div>
+      <div class="header-logo-text">
+        <h1>Deeksha Dental Care</h1>
+        <span class="tagline">📍 Near Eid Gah Bari, Bikaner — Rajasthan</span>
+      </div>
+    </a>
+    <div class="header-contact">
+      <a href="tel:+919376585486" class="phone-btn"><i class="fas fa-phone-alt"></i> 93765 85486</a>
+      <span class="email-txt"><i class="fas fa-envelope"></i> ddccare2000@gmail.com</span>
+    </div>
+  </div>
+  <div class="header-divider"></div>
 </header>
 
+
 <!-- NAV -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="rct.html">RCT</a>
-  <a href="implant.html">Implants</a>
-  <a href="braces.html">Braces</a>
-  <a href="denture.html">Denture</a>
-  <a href="postcore.html">Post & Core</a>
-  <a href="extraction.html">Extraction</a>
-  <a href="scaling.html">Scaling</a>
-  <a href="composite.html">Composite</a>
-  <a href="blog.html" class="active" style="color:#00d4ff;">📝 Blog</a>
-  <a href="oral-hygiene.html" style="color:#00d4ff;">🪥 Oral Hygiene</a>
-  <a href="kids-dental.html" style="color:#00d4ff;">👶 Kids</a>
+<nav class="premium-nav">
+  <div class="nav-inner">
+    <a href="index.html">🏠 Home</a>
+    <a href="rct.html">🦷 RCT</a>
+    <a href="implant.html">🔩 Implants</a>
+    <a href="braces.html">😁 Braces</a>
+    <a href="denture.html">🦴 Denture</a>
+    <a href="postcore.html">🔧 Post &amp; Core</a>
+    <a href="extraction.html">🚨 Extraction</a>
+    <a href="scaling.html">🪥 Scaling</a>
+    <a href="composite.html">✨ Composite</a>
+    <a href="kids-dental.html">👶 Kids</a>
+    <a href="oral-hygiene.html">💚 Oral Hygiene</a>
+    <a href="implant-vs-bridge.html">⚖️ Implant vs Bridge</a>
+    <a href="blog.html" class="blog-special">📝 Blog</a>
+  </div>
 </nav>
 
-<!-- GOOGLE TRANSLATE -->
-<div class="translate-bar">
-  <span>🌐 Translate:</span>
-  <div id="google_translate_element"></div>
-</div>
 
+<!-- GOOGLE TRANSLATE -->
+<div style="text-align:right; padding:8px 20px; background:#f4f9fb; border-bottom:1px solid #d4eaf3; font-size:0.8rem;">
+  <span style="color:#666; margin-right:8px;">🌐 Translate:</span>
+  <div id="google_translate_element" style="display:inline-block;"></div>
+</div>
 <script>
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
@@ -774,10 +905,50 @@ function googleTranslateElementInit() {
 <!-- SEARCH BAR -->
 <div style="padding:30px 20px 0; background:var(--cream);">
   <div class="blog-search">
-    <input type="text" placeholder="Search: RCT, Implants, Braces, Dant Dard...">
-    <button><i class="fas fa-search"></i></button>
+    <input type="text" id="blogSearchInput" placeholder="Search: RCT, Implants, Braces, Scaling..." oninput="runBlogSearch(this.value)" onkeydown="if(event.key==='Enter') runBlogSearch(this.value)">
+    <button onclick="runBlogSearch(document.getElementById('blogSearchInput').value)"><i class="fas fa-search"></i></button>
+  </div>
+  <div id="searchResults" style="max-width:700px;margin:12px auto 0;display:none;">
+    <div style="background:white;border-radius:12px;padding:16px 20px;border:1px solid #d4eaf3;box-shadow:0 4px 14px rgba(0,0,0,0.06);">
+      <p style="margin:0;font-weight:600;color:#083e52;" id="searchResultText"></p>
+      <div id="searchResultLinks" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;"></div>
+    </div>
   </div>
 </div>
+<script>
+const blogPages = [
+  {keywords:['rct','root canal','root','canal','dant dard','toothache','pain','nali'], title:'Root Canal Treatment (RCT)', url:'rct.html', icon:'🦷'},
+  {keywords:['implant','implants','missing tooth','titanium','screw'], title:'Dental Implants', url:'implant.html', icon:'🔩'},
+  {keywords:['braces','aligner','aligners','teeth alignment','crooked','orthodontic'], title:'Braces & Aligners', url:'braces.html', icon:'😁'},
+  {keywords:['denture','complete denture','partial denture','flexible','false teeth'], title:'Dentures', url:'denture.html', icon:'🦴'},
+  {keywords:['post','core','post core','post and core','crown support'], title:'Post & Core', url:'postcore.html', icon:'🔧'},
+  {keywords:['extraction','remove tooth','pull tooth','tooth removal','wisdom'], title:'Tooth Extraction', url:'extraction.html', icon:'🚨'},
+  {keywords:['scaling','cleaning','tartar','calculus','gum','teeth clean'], title:'Scaling & Teeth Cleaning', url:'scaling.html', icon:'🪥'},
+  {keywords:['composite','filling','bonding','cavity','white filling'], title:'Composite Restoration', url:'composite.html', icon:'✨'},
+  {keywords:['kids','children','baby','milk teeth','doodh','bachon','child'], title:'Kids Dental Guide', url:'kids-dental.html', icon:'👶'},
+  {keywords:['oral hygiene','muh','brushing','floss','bad breath','hygiene'], title:'Oral Hygiene Guide', url:'oral-hygiene.html', icon:'💚'},
+  {keywords:['rct diet','after rct','rct ke baad','rct food','root canal food'], title:'Diet After RCT', url:'post-rct-diet.html', icon:'🍽️'},
+  {keywords:['implant life','implant care','after implant','implant food'], title:'Life After Implant', url:'post-implant-life.html', icon:'🔩'},
+  {keywords:['braces food','after braces','braces diet'], title:'Food After Braces', url:'post-braces-food.html', icon:'😁'},
+  {keywords:['implant vs bridge','bridge vs implant','compare','comparison','which is better'], title:'Implant vs Bridge Comparison', url:'implant-vs-bridge.html', icon:'⚖️'},
+];
+function runBlogSearch(val) {
+  const q = val.toLowerCase().trim();
+  const box = document.getElementById('searchResults');
+  if (!q) { box.style.display='none'; return; }
+  const found = blogPages.filter(p => p.keywords.some(k => k.includes(q) || q.includes(k)));
+  box.style.display = 'block';
+  if (found.length === 0) {
+    document.getElementById('searchResultText').textContent = 'No results found. Try: RCT, Implants, Braces, Scaling...';
+    document.getElementById('searchResultLinks').innerHTML = '';
+  } else {
+    document.getElementById('searchResultText').textContent = `Found ${found.length} result(s):`;
+    document.getElementById('searchResultLinks').innerHTML = found.map(p =>
+      `<a href="${p.url}" style="display:inline-flex;align-items:center;gap:6px;background:#eaf6fb;color:#083e52;padding:8px 14px;border-radius:20px;text-decoration:none;font-weight:600;font-size:0.85rem;border:1px solid #c4e0ed;">${p.icon} ${p.title}</a>`
+    ).join('');
+  }
+}
+</script>
 
 <!-- ============================================================
   ADSENSE — TOP LEADERBOARD AD (728x90)
@@ -1070,7 +1241,7 @@ function googleTranslateElementInit() {
     <a href="#">Disclaimer</a>
     <a href="index.html#contact">Contact</a>
   </div>
-  <p style="margin-top:8px;">📞 9376585486 | ✉ ddccare2000@gmail.com | 📍 Near Eid Gah Bari, Bikaner, Rajasthan</p>
+  <p style="margin-top:8px;">📞 9376585486 | ✉ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a7c3c3c4c4c6d5c295979797e7c0cac6cecb89c4c8ca">[email&#160;protected]</a> | 📍 Near Eid Gah Bari, Bikaner, Rajasthan</p>
   <p class="footer-disclaimer">⚠️ Is blog par di gayi jaankari sirf educational purpose ke liye hai. Koi bhi dental problem ke liye kisi trained dentist se milein.</p>
   <p style="margin-top:10px;">© 2026 Deeksha Dental Care. All Rights Reserved.</p>
 </footer>
@@ -1093,11 +1264,4 @@ function googleTranslateElementInit() {
   </div>
   <div class="chatbot-input-area">
     <input type="text" id="chatbotInput" placeholder="Type your question..." onkeypress="handleKeyPress(event)">
-    <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
-  </div>
-</div>
-
-<script src="chatbot.js"></script>
-
-</body>
-</html>
+    <button onclick="send

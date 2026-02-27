@@ -138,6 +138,121 @@
     background: #002856;
   }
 </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+  /* ===== PREMIUM HEADER STYLES ===== */
+  .premium-header {
+    background: linear-gradient(135deg, #040f1a 0%, #083e52 40%, #0a7ea4 100%);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .premium-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .premium-header::after {
+    content: '🦷';
+    position: absolute;
+    font-size: 260px;
+    opacity: 0.04;
+    right: -40px;
+    top: -40px;
+    transform: rotate(-15deg);
+    line-height: 1;
+  }
+  .header-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 22px 40px;
+    gap: 20px;
+  }
+  .header-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .header-logo-icon {
+    width: 52px; height: 52px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.7rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    flex-shrink: 0;
+  }
+  .header-logo-text h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem; font-weight: 800;
+    color: white; margin: 0;
+    letter-spacing: -0.5px; line-height: 1.1;
+  }
+  .header-logo-text .tagline {
+    font-size: 0.75rem; color: rgba(255,255,255,0.6);
+    font-weight: 400; letter-spacing: 0.5px; display: block; margin-top: 2px;
+  }
+  .header-contact { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+  .header-contact .phone-btn {
+    color: white; text-decoration: none; font-size: 0.9rem; font-weight: 700;
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.12);
+    padding: 9px 18px; border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.5px;
+  }
+  .header-contact .phone-btn:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+  .header-contact .email-txt {
+    font-size: 0.76rem; color: rgba(255,255,255,0.55);
+    font-family: 'Outfit', sans-serif;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .header-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    position: relative; z-index: 2;
+  }
+  .premium-nav {
+    background: rgba(4, 15, 26, 0.97);
+    position: sticky; top: 0; z-index: 1000;
+    border-bottom: 1px solid rgba(10,126,164,0.35);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center;
+    padding: 0 20px;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .premium-nav a {
+    color: rgba(255,255,255,0.68);
+    text-decoration: none; font-weight: 500;
+    font-size: 0.81rem;
+    font-family: 'Outfit', sans-serif;
+    padding: 14px 13px;
+    white-space: nowrap;
+    transition: all 0.25s;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 0.3px;
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .premium-nav a:hover, .premium-nav a.active {
+    color: white; border-bottom-color: #0a7ea4;
+  }
+  .premium-nav a.blog-special { color: #7dd3f0; }
+  .premium-nav a.blog-special:hover { color: white; }
+  @media (max-width: 768px) {
+    .header-inner { padding: 16px 18px; flex-wrap: wrap; }
+    .header-logo-text h1 { font-size: 1.1rem; }
+    .premium-nav a { font-size: 0.76rem; padding: 12px 9px; }
+  }
+  </style>
 </head>
 
 <body>
@@ -146,34 +261,54 @@
   <i class="fab fa-whatsapp"></i>
 </a>
 
-<header>
-  <h1>Dental Implants</h1>
-  <p>Permanent Tooth Replacement — Detailed costs & options (2026)</p>
-  <p>📞 9376585486 | ✉ ddccare2000@gmail.com</p>
+
+<header class="premium-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <div class="header-logo-icon">🦷</div>
+      <div class="header-logo-text">
+        <h1>Deeksha Dental Care</h1>
+        <span class="tagline">📍 Near Eid Gah Bari, Bikaner — Rajasthan</span>
+      </div>
+    </a>
+    <div class="header-contact">
+      <a href="tel:+919376585486" class="phone-btn"><i class="fas fa-phone-alt"></i> 93765 85486</a>
+      <span class="email-txt"><i class="fas fa-envelope"></i> ddccare2000@gmail.com</span>
+    </div>
+  </div>
+  <div class="header-divider"></div>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="rct.html">RCT</a>
-  <a href="implant.html">Implants</a>
-  <a href="braces.html">Braces</a>
-  <a href="denture.html">denture</a>
-  <a href="postcore.html">post & core</a>
-  <a href="extraction.html">Extraction</a>
-  <a href="scaling.html">Scaling</a>
-  <a href="composite.html">Composite</a>
+
+<nav class="premium-nav">
+  <div class="nav-inner">
+    <a href="index.html">🏠 Home</a>
+    <a href="rct.html">🦷 RCT</a>
+    <a href="implant.html">🔩 Implants</a>
+    <a href="braces.html">😁 Braces</a>
+    <a href="denture.html">🦴 Denture</a>
+    <a href="postcore.html">🔧 Post &amp; Core</a>
+    <a href="extraction.html">🚨 Extraction</a>
+    <a href="scaling.html">🪥 Scaling</a>
+    <a href="composite.html">✨ Composite</a>
+    <a href="kids-dental.html">👶 Kids</a>
+    <a href="oral-hygiene.html">💚 Oral Hygiene</a>
+    <a href="implant-vs-bridge.html">⚖️ Implant vs Bridge</a>
+    <a href="blog.html" class="blog-special">📝 Blog</a>
+  </div>
 </nav>
 
-<!-- Multi Language -->
-<div style="text-align:right; padding:10px 20px;">
-  <div id="google_translate_element"></div>
-</div>
 
+<div style="text-align:right; padding:8px 20px; background:#f4f9fb; border-bottom:1px solid #d4eaf3; font-size:0.8rem;">
+  <span style="color:#666; margin-right:8px;">🌐 Translate:</span>
+  <div id="google_translate_element" style="display:inline-block;"></div>
+</div>
 <script>
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
     pageLanguage: 'en',
-    includedLanguages: 'en,hi,bn,ta,te,ur,gu,pa'
+    includedLanguages: 'en,hi,bn,ta,te,ur,gu,pa',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
   }, 'google_translate_element');
 }
 </script>
@@ -296,10 +431,73 @@ function googleTranslateElementInit() {
     <p style="font-size:0.9rem;">We typically respond within 2 hours.</p>
   </div>
 
+
   <!-- small card about healing time (like braces duration) -->
   <div class="card">
     <h2>Treatment Duration & Healing</h2>
     <p><strong>Osseointegration:</strong> 3–6 months for lower jaw, 4–7 months for upper jaw. Immediate loading (teeth in a day) possible in selected cases with All‑on‑4. Full treatment from implant to final crown can take 4–8 months.</p>
+  </div>
+
+  <!-- EXTRA PRO CONTENT -->
+  <div class="card" style="background:#f5faff;">
+    <h2>🔬 What Determines Implant Success?</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px;">
+      <div style="background:white;padding:18px;border-radius:14px;border-left:4px solid #004080;">
+        <h4 style="color:#004080;margin:0 0 8px;">🦴 Bone Quality & Quantity</h4>
+        <p style="margin:0;font-size:0.88rem;">Type II/III bone (moderately dense) offers best osseointegration. Low-quality bone (Type IV, common in upper back jaw) may require bone grafting. CBCT scan shows exact bone volume before surgery.</p>
+      </div>
+      <div style="background:white;padding:18px;border-radius:14px;border-left:4px solid #004080;">
+        <h4 style="color:#004080;margin:0 0 8px;">🚭 No Smoking</h4>
+        <p style="margin:0;font-size:0.88rem;">Smoking reduces blood flow to healing bone and increases implant failure risk by 2–3×. We strongly advise smoking cessation for at least 2 weeks pre-surgery and throughout healing.</p>
+      </div>
+      <div style="background:white;padding:18px;border-radius:14px;border-left:4px solid #004080;">
+        <h4 style="color:#004080;margin:0 0 8px;">💊 Medical Conditions</h4>
+        <p style="margin:0;font-size:0.88rem;">Controlled diabetes, hypertension, and thyroid conditions are manageable. Uncontrolled diabetes significantly impairs healing. Osteoporosis patients on bisphosphonates require special protocols.</p>
+      </div>
+      <div style="background:white;padding:18px;border-radius:14px;border-left:4px solid #004080;">
+        <h4 style="color:#004080;margin:0 0 8px;">🧼 Oral Hygiene</h4>
+        <p style="margin:0;font-size:0.88rem;">Peri-implantitis (implant gum disease) affects ~20% of implants at 10 years when hygiene is poor. Brush twice daily, use interdental brushes, and attend regular checkups to prevent it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>⚖️ Implant vs Bridge — Which is Better for You?</h2>
+    <p>Can't decide between an implant and a bridge? We've created a dedicated comparison guide to help you make the right choice based on your specific situation.</p>
+    <div style="text-align:center;margin-top:18px;">
+      <a href="implant-vs-bridge.html" style="display:inline-block;background:linear-gradient(135deg,#004080,#0a7ea4);color:white;padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:700;font-size:1rem;">
+        ⚖️ Compare Implant vs Bridge →
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📋 Post-Implant Care — Critical Do's & Don'ts</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:14px;">
+      <div style="background:#ecfdf5;padding:18px;border-radius:14px;border:1px solid #86efac;">
+        <h4 style="color:#059669;margin:0 0 12px;">✅ Do This</h4>
+        <ul style="margin:0;padding-left:16px;font-size:0.88rem;line-height:1.9;">
+          <li>Apply ice packs to reduce swelling (20 min on/off)</li>
+          <li>Take prescribed antibiotics & pain medication</li>
+          <li>Eat soft foods for 2 weeks post-surgery</li>
+          <li>Rinse gently with warm salt water after meals</li>
+          <li>Sleep with head slightly elevated</li>
+          <li>Attend all follow-up appointments</li>
+        </ul>
+      </div>
+      <div style="background:#fef2f2;padding:18px;border-radius:14px;border:1px solid #fca5a5;">
+        <h4 style="color:#dc2626;margin:0 0 12px;">❌ Avoid These</h4>
+        <ul style="margin:0;padding-left:16px;font-size:0.88rem;line-height:1.9;">
+          <li>Smoking (at least 6–8 weeks post-surgery)</li>
+          <li>Touching the surgical site with tongue/fingers</li>
+          <li>Hard, crunchy, or chewy foods initially</li>
+          <li>Strenuous physical activity for 48–72 hours</li>
+          <li>Hot beverages immediately after surgery</li>
+          <li>Missing follow-up check appointments</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:14px;font-size:0.88rem;"><a href="post-implant-life.html" style="color:#004080;font-weight:600;">📖 Read our complete post-implant lifestyle guide →</a></p>
   </div>
 
 </div> <!-- container end -->
@@ -324,12 +522,4 @@ function googleTranslateElementInit() {
         </div>
     </div>
     <div class="chatbot-input-area">
-        <input type="text" id="chatbotInput" placeholder="Type your question..." onkeypress="handleKeyPress(event)">
-        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
-    </div>
-</div>
-
-<!-- Link chatbot JavaScript -->
-<script src="chatbot.js"></script>
-</body>
-</html>
+        <input type="text" id="chatbotInput" placeholder="Type your ques
