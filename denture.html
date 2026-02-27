@@ -403,6 +403,7 @@ function googleTranslateElementInit() {
 <footer>
   © 2026 Deeksha Dental Care — Dentures with care and comfort
 </footer>
+
 <!-- Chatbot HTML -->
 <div class="chatbot-button" onclick="toggleChatbot()">
     <i class="fas fa-comment-dots"></i>
@@ -420,4 +421,12 @@ function googleTranslateElementInit() {
         </div>
     </div>
     <div class="chatbot-input-area">
-        <input type="text" id="chatbotInput" placeholder="Type your ques
+        <input type="text" id="chatbotInput" placeholder="Type your question..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<!-- Link chatbot JavaScript -->
+<script src="chatbot.js"></script>
+</body>
+</html>
