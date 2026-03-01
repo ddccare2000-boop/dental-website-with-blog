@@ -83,6 +83,236 @@ body{font-family:'Outfit',sans-serif;background:#f4f9fb;color:#1e293b;line-heigh
 .footer-links{margin-bottom:12px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;}
 @media(max-width:768px){.header-inner{padding:16px 18px;flex-wrap:wrap;}.header-logo-text h1{font-size:1.1rem;}.premium-nav a{font-size:0.76rem;padding:12px 9px;}.card{padding:22px 20px;}.hero-card{padding:40px 24px;}.hero-card h2{font-size:1.8rem;}}
 </style>
+
+<style>
+/* ===== PREMIUM MEDIA GALLERY STYLES ===== */
+.media-gallery-section {
+  background: white;
+  border-radius: 20px;
+  padding: 36px 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  border: 1px solid #e8f4f9;
+  margin-bottom: 28px;
+}
+.media-gallery-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #083e52;
+  margin-bottom: 6px;
+}
+.media-gallery-section .section-sub {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e8f4f9;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.gallery-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+.gallery-grid.three-col { grid-template-columns: repeat(3, 1fr); }
+.gallery-item {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  position: relative;
+  background: #0a0a0a;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(10,126,164,0.2);
+}
+.gallery-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s;
+}
+.gallery-item:hover img { opacity: 0.92; }
+.gallery-item .img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(4,15,26,0.88));
+  color: white;
+  padding: 28px 14px 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: 'Outfit', sans-serif;
+}
+.gallery-item .img-caption .tag {
+  display: inline-block;
+  background: #0a7ea4;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.gallery-item .img-caption .tag.green { background: #059669; }
+.gallery-item .img-caption .tag.orange { background: #ea580c; }
+
+/* Before-After pair */
+.before-after-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  margin-bottom: 16px;
+}
+.before-after-grid .ba-side {
+  position: relative;
+  background: #0a0a0a;
+}
+.before-after-grid .ba-side img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+.before-after-grid .ba-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Outfit', sans-serif;
+}
+.ba-label.before { background: #dc2626; color: white; }
+.ba-label.after { background: #059669; color: white; }
+
+/* Video embed */
+.video-embed-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  background: #040f1a;
+  margin-bottom: 16px;
+  position: relative;
+}
+.video-embed-card video {
+  width: 100%;
+  display: block;
+  max-height: 420px;
+  object-fit: contain;
+}
+.video-embed-caption {
+  background: #040f1a;
+  color: rgba(255,255,255,0.75);
+  padding: 12px 18px;
+  font-size: 0.82rem;
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.video-embed-caption i { color: #0a7ea4; }
+
+/* Doctor profile card */
+.doctor-card {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background: linear-gradient(135deg, #f4f9fb, #eaf6fb);
+  border-radius: 20px;
+  padding: 28px 32px;
+  border: 1px solid #d4eaf3;
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.doctor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(10,126,164,0.15);
+}
+.doctor-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 4px solid #0a7ea4;
+  box-shadow: 0 4px 16px rgba(10,126,164,0.25);
+  flex-shrink: 0;
+}
+.doctor-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #083e52;
+  margin-bottom: 4px;
+}
+.doctor-info .dr-title {
+  color: #0a7ea4;
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-bottom: 8px;
+}
+.doctor-info p {
+  color: #475569;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin: 0;
+}
+.photo-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.photo-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.photo-card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.1);
+  position: relative;
+  cursor: pointer;
+}
+.photo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+.photo-card:hover img { transform: scale(1.04); }
+.photo-card .pc-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(4,15,26,0.82));
+  color: white;
+  padding: 20px 12px 10px;
+  font-size: 0.75rem;
+  font-family: 'Outfit', sans-serif;
+}
+@media(max-width:768px) {
+  .media-gallery-section { padding: 22px 18px; }
+  .gallery-grid.two-col, .before-after-grid,
+  .photo-grid-2, .photo-grid-3 { grid-template-columns: 1fr; }
+  .gallery-grid.three-col { grid-template-columns: repeat(2, 1fr); }
+  .doctor-card { flex-direction: column; text-align: center; padding: 22px 18px; }
+  .gallery-item img, .photo-card img { height: 200px; }
+}
+</style>
+
 </head>
 <body>
 
@@ -165,27 +395,42 @@ body{font-family:'Outfit',sans-serif;background:#f4f9fb;color:#1e293b;line-heigh
 
   <!-- Our Team -->
   <div class="card">
-    <h2>👨‍⚕️ Our Dental Team</h2>
-    <p>Our clinic is staffed by qualified, experienced dental professionals dedicated to your oral health and overall wellbeing.</p>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-icon">👨‍⚕️</div>
-        <h4>Chief Dental Surgeon</h4>
-        <div class="role">BDS | Endodontist & Implantologist</div>
-        <p>Specializes in Root Canal Treatment, Dental Implants, and complex oral surgeries. Trained with advanced protocols for painless procedures and high success rates.</p>
+    <h2>👨‍⚕️ Meet Our Dental Team</h2>
+    <p style="color:#64748b;font-size:0.93rem;margin-bottom:24px;">Our clinic is led by two qualified, experienced dental professionals who are deeply committed to your oral health, comfort, and confidence.</p>
+
+    <!-- Dr. Rohit Swami -->
+    <div class="doctor-card">
+      <img src="dr_rohit_swami.jpeg" alt="Dr. Rohit Swami — Dentist at Deeksha Dental Care Bikaner" class="doctor-photo" loading="lazy">
+      <div class="doctor-info">
+        <h3>Dr. Rohit Swami</h3>
+        <div class="dr-title">BDS | Endodontist & Implantologist</div>
+        <p>Dr. Rohit Swami specializes in Root Canal Treatment, Dental Implants, Oral Surgery, and complex restorations. Trained in advanced rotary endodontics, electronic apex locator techniques, and implant placement protocols. His patient-first approach ensures virtually painless procedures with high long-term success rates.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+          <span style="background:#eaf6fb;color:#0a7ea4;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;border:1px solid #b8e0ee;">Root Canal</span>
+          <span style="background:#eaf6fb;color:#0a7ea4;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;border:1px solid #b8e0ee;">Dental Implants</span>
+          <span style="background:#eaf6fb;color:#0a7ea4;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;border:1px solid #b8e0ee;">Oral Surgery</span>
+        </div>
       </div>
-      <div class="team-card">
-        <div class="team-icon">👩‍⚕️</div>
-        <h4>Orthodontist</h4>
-        <div class="role">BDS | Orthodontics Specialist</div>
-        <p>Expert in all types of braces — metal, ceramic, and clear aligners. Treats malocclusion in children and adults with precision and care.</p>
+    </div>
+
+    <!-- Dr. Swati Swami -->
+    <div class="doctor-card">
+      <img src="dr_swati_sad.jpeg" alt="Dr. Swati Swami — Dentist at Deeksha Dental Care Bikaner" class="doctor-photo" loading="lazy">
+      <div class="doctor-info">
+        <h3>Dr. Swati Swami</h3>
+        <div class="dr-title">BDS | Prosthodontist & Orthodontics</div>
+        <p>Dr. Swati Swami specializes in Crowns, Bridges, Full Mouth Rehabilitation, Dentures, and Orthodontic treatments including metal braces, ceramic braces, and clear aligners. Her meticulous attention to aesthetics and function ensures every restoration looks natural and lasts long.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+          <span style="background:#f5f3ff;color:#7c3aed;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;border:1px solid #c4b5fd;">Braces & Aligners</span>
+          <span style="background:#f5f3ff;color:#7c3aed;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;border:1px solid #c4b5fd;">Dentures</span>
+          <span style="background:#f5f3ff;color:#7c3aed;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;border:1px solid #c4b5fd;">Crown & Bridge</span>
+        </div>
       </div>
-      <div class="team-card">
-        <div class="team-icon">🦷</div>
-        <h4>Prosthodontist</h4>
-        <div class="role">BDS | Crown, Bridge & Denture Specialist</div>
-        <p>Specializes in full-mouth rehabilitation, dentures, crowns, bridges, and post & core procedures. Expert in zirconia and PFM restorations.</p>
-      </div>
+    </div>
+
+    <div style="background:#eaf6fb;border-radius:12px;padding:14px 18px;margin-top:8px;font-size:0.85rem;color:#475569;border-left:4px solid #0a7ea4;display:flex;align-items:center;gap:10px;">
+      <i class="fas fa-award" style="color:#0a7ea4;font-size:1.2rem;"></i>
+      <span>Both doctors are registered with the Dental Council of India (DCI) and are members of the Indian Dental Association (IDA), Rajasthan chapter.</span>
     </div>
   </div>
 
