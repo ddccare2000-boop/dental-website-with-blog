@@ -1,15 +1,15 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://www.deekshadental.com/sitemap.xml
-
-# Allow all major crawlers
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
-User-agent: Mediapartners-Google
-Allow: /
+Sitemap: https://www.deekshadental.com/sitemap.xml
+
+# Block non-useful pages from crawl budget
+Disallow: /cdn-cgi/
